@@ -1,5 +1,5 @@
 # Node.js
-server/node_modules/
+node_modules/
 
 
 # Dependency lock files
