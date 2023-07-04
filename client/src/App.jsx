@@ -5,14 +5,15 @@ import "./App.css"
 function Welcome() {
   return (
     <>
+    <div className="background">
       <div className="Welcome-section">
         <div className="welcome-empty-section">
-          hi
         </div>
         <div className="Welcome-heading">
           <div> Welcome to TempDashboard ReaXpress </div>
           <button className="Welcome-button"> Load Dashboard</button>
         </div>
+      </div>
       </div>
     </>
   )
