@@ -1,24 +1,29 @@
 import React, { useState, useEffect } from "react";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import Home from "./dummy";
+
 <script src="main.js?v=12345"></script>
 
-function App() {
+
+export default function App() {
 
   const [dataBackend, setDataBackend] = useState([]);
 
   useEffect(() => {
-    fetch('/client')
+    fetch('/testing')
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        setDataBackend(data.users)});
+        setDataBackend(data.id)});
   }, []);
 
+  console.log(dataBackend, 'hiiiiiiiiiiiiii')
+
   return (
+
     <>
-      {dataBackend.map((i, data) => 
-      <p key = {i}>{data} </p> )}
+    <h1>hiiiiii</h1>
+      {dataBackend}
     </>
+
   );
 }
-
-export default App;
