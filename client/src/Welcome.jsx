@@ -1,4 +1,5 @@
-// import { TiWeatherDownpour } from 'react-icons/fa';
+import { WiDaySnowWind } from "react-icons/wi";
+import "./App.css"
 
 export default function Home() {
     return (
@@ -6,7 +7,7 @@ export default function Home() {
       <div className="background">
         <div className="Welcome-section">
           <div className="welcome-empty-section">
-         
+          < WiDaySnowWind className="WeatherIcon"/>
           </div>
           <div className="Welcome-heading">
             <div> Welcome to TempDashboard ReaXpress </div>
