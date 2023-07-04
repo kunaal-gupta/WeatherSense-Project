@@ -4,25 +4,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: sans-serif;
 }
 
 .Welcome-section{
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  border-radius: 18px;
+  border-radius: 25px;
   height: 80vh;
   width: 80vw;
   background-color: rgb(61, 154, 246);
   
+  
 
 }
+
 
 .welcome-empty-section{
   background-color: rgb(61, 154, 246);
   height: 80vh;
   width: 15vw;
-  border-radius: 18px;
+  border-radius: 25px;
 }
 
 .Welcome-heading {
@@ -31,10 +34,8 @@
   justify-content: center;
   align-items: center;
   background-color: rgb(169, 222, 243);
-  border: white 10px solid;
-
-  border-radius: 30px;
-  height: 79vh;
+  border-radius: 60px 18px 18px 60px;
+  height: 80vh;
   width: 65vw;
   font-size: 2.5vw;
   font-weight:600;
@@ -44,12 +45,30 @@
   margin-top: 5vh;
   padding: 2vh 6vh 2vh 6vh;
   font-size: 60%;
-  border-radius: 18px;
-  border: rgba(70, 50, 219, 0.76);
+
   color: white;
   font-weight: 700;
-  background-color: rgba(72, 183, 231, 0.591);
+  border: rgba(72, 183, 231, 0.591) solid;
+  border-radius: 118px;
+  background-color: rgb(61, 154, 246);
+  box-shadow: 4px 8px 16px rgba(72, 183, 231, 0.591);
+  animation: running-border 2s linear infinite;
 
+}
+
+@keyframes running-border {
+  0% {
+    border-top: white 5px solid;
+  }
+  25% {
+    border-right: white 5px solid;
+  }
+  75% {
+    border-bottom: white 10px solid;
+  }
+  100% {
+    border-left: white 5px solid;
+  }
 }
 
 .Welcome-button:hover{
@@ -57,9 +76,9 @@
   font-weight: 100;
   cursor: pointer;
   color: white;
-  border: white solid;
+  border: white solid 2px;
   font-weight: 700;
 
-  box-shadow: 2px 2px 4px rgba(72, 183, 231, 0.591);
-  background-color: rgba(72, 183, 231, 0.591);
+  box-shadow: 4px 8px 16px rgba(72, 183, 231, 0.591);
+  background-color: rgb(61, 154, 246);
 }
