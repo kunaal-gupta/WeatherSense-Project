@@ -34,22 +34,9 @@ animation: border-icon 0.5s linear infinite;
 @keyframes border-icon {
   0% {
     color: red;
-    transform: rotate(-15deg);
   }
-  /* 25% {
-    color: rgb(253, 122, 0);
-    transform: rotate(5deg);
-
-  }
-  75% {
-    color: orange;
-    transform: rotate(10deg); */
-
-  /* } */
   100% {
     color: blue;
-    transform: rotate(15deg);
-
   }
 }
 
@@ -60,7 +47,7 @@ animation: border-icon 0.5s linear infinite;
   justify-content: flex-start;
   border-radius: 25px;
   height: 80vh;
-  width: 80vw;
+  width: 70vw;
   background-color: rgb(61, 154, 246);
   
   
@@ -71,12 +58,9 @@ animation: border-icon 0.5s linear infinite;
 .welcome-empty-section{
   background-color: rgb(61, 154, 246);
   height: 80vh;
-  width: 15vw;
+  width: 13vw;
   border-radius: 25px;
   border-left: rgb(236, 236, 236) solid 2px ;
-
-  
-
 
 }
 
@@ -88,14 +72,13 @@ animation: border-icon 0.5s linear infinite;
   background-color: rgb(169, 222, 243);
   border-radius: 60px 18px 18px 60px;
   height: 79.5vh;
-  width: 65vw;
+  width: 69vw;
   font-size: 2.5vw;
   font-weight:600;
-  text-shadow: 2px 2px 0 white;
   border: rgba(252, 252, 252, 0.591) solid;
-  background-image: url(./mountain.jpg);
+  /* background-image: url(./mountain.jpg);
   background-position: 20%;
-  background-size: 100%;
+  background-size: 100%; */
 
 }
 
@@ -110,11 +93,11 @@ animation: border-icon 0.5s linear infinite;
   border-radius: 118px;
   background-color: rgb(61, 154, 246);
   box-shadow: 4px 8px 16px rgba(72, 183, 231, 0.591);
-  animation: running-border 1s linear infinite;
+  /* animation: running-border 1s linear infinite; */
 
 }
 
-@keyframes running-border {
+/* @keyframes running-border {
   0% {
     border-top: white 5px solid;
   }
@@ -127,18 +110,19 @@ animation: border-icon 0.5s linear infinite;
   100% {
     border-left: white 5px solid;
   }
-}
+} */
 
 .Welcome-button:hover{
   transform: scale(1.1) translate(0, 20%);
   font-weight: 100;
   cursor: pointer;
   color: white;
-  border: orange solid 5px;
+  border-bottom: white solid 5px;
   font-weight: 700;
 
   box-shadow: 4px 8px 16px rgba(72, 183, 231, 0.591);
   background-color: rgb(61, 154, 246);
+  /* animation: running-border 0s linear infinite; */
 }
 
 

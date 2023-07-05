@@ -1,7 +1,7 @@
 import { WiDaySnowWind } from "react-icons/wi";
-import "./App.css"
+import "../css/App.css"
 import { DiReact, DiNodejs, DiJavascript1 } from "react-icons/di";
-import mountainImage from './mountain.jpg';
+// import mountainImage from './mountain.jpg';
 
 
 export default function Home() {
@@ -15,10 +15,10 @@ export default function Home() {
 
           </div>
           <div className="Welcome-heading">
-            <div> Welcome to Temp<span style={{ color: 'Orange' }}>Dashboard</span>-Rea<span style={{ color: 'Orange' }}>Xpress</span> </div>
+            <div> Welcome to Weather<span style={{ color: 'White' }}>Sense</span></div>
             <button className="Welcome-button"> Load Dashboard</button>
-
-            {/* <div className="built-by" > Made using
+{/* 
+            <div className="built-by" > Made using
               <div className="icons"><DiReact /> <DiNodejs /> < DiJavascript1 /> </div>
             </div> */}
             <div className="loader">.</div>

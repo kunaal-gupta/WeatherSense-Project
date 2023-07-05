@@ -1,5 +1,5 @@
 import Home from "./Welcome";
-import "./App.css"
+import "../css/App.css"
 <script src="main.js?v=12345"></script>
 
 
