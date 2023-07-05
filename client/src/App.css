@@ -18,18 +18,38 @@ animation: border-icon 0.5s linear infinite;
 
 }
 
+.built-by{
+  position: relative;
+  font-size: 50%;
+}
+
+.icons {
+    color: white;
+    /* width: 50%;
+    height: 50%; */
+    bottom: 0;
+    right: 0;
+}
+
 @keyframes border-icon {
   0% {
     color: red;
+    transform: rotate(-15deg);
   }
-  25% {
+  /* 25% {
     color: rgb(253, 122, 0);
+    transform: rotate(5deg);
+
   }
   75% {
     color: orange;
-  }
+    transform: rotate(10deg); */
+
+  /* } */
   100% {
     color: blue;
+    transform: rotate(15deg);
+
   }
 }
 
@@ -55,6 +75,8 @@ animation: border-icon 0.5s linear infinite;
   border-radius: 25px;
   border-left: rgb(236, 236, 236) solid 2px ;
 
+  
+
 
 }
 
@@ -69,7 +91,11 @@ animation: border-icon 0.5s linear infinite;
   width: 65vw;
   font-size: 2.5vw;
   font-weight:600;
+  text-shadow: 2px 2px 0 white;
   border: rgba(252, 252, 252, 0.591) solid;
+  background-image: url(./mountain.jpg);
+  background-position: 20%;
+  background-size: 100%;
 
 }
 
@@ -108,9 +134,36 @@ animation: border-icon 0.5s linear infinite;
   font-weight: 100;
   cursor: pointer;
   color: white;
-  border: white solid 2px;
+  border: orange solid 5px;
   font-weight: 700;
 
   box-shadow: 4px 8px 16px rgba(72, 183, 231, 0.591);
   background-color: rgb(61, 154, 246);
 }
+
+
+.loader{
+  /* background-color: blue; */
+  margin-top: 5%;
+  border-top:  rgb(255, 132, 0) 10px solid;
+  border-bottom: rgb(255, 132, 0) 10px solid;
+  border-left: white 10px solid;
+  border-right: rgb(99, 179, 229) 10px solid;
+
+  border-radius: 50%;
+  height: 6%;
+  width: 4%;
+  animation: loader 1s linear infinite;
+
+  
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
