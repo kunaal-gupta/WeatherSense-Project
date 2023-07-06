@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "react-icons": "^4.10.1"
+    "react-hook-form": "^7.45.1",
+    "react-icons": "^4.10.1",
+    "react-router-dom": "^5.3.4"
   }
 }

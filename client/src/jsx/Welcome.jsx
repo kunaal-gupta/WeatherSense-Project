@@ -1,5 +1,6 @@
 import { WiDaySnowWind } from "react-icons/wi";
 import "../css/App.css"
+// eslint-disable-next-line
 import { DiReact, DiNodejs, DiJavascript1 } from "react-icons/di";
 // import mountainImage from './mountain.jpg';
 
