@@ -15,7 +15,7 @@
     border-radius: 25px;
     height: 80vh;
     width: 70vw;
-    background-color: rgba(1, 66, 106, 0.445);
+    background-color: rgb(1, 66, 106);
 
 
 
@@ -26,7 +26,6 @@
 
 
 .dash-left-section {
-    background-color: rgba(1, 66, 106, 0.445);
     height: 80vh;
     width: 13vw;
     border-radius: 25px;
@@ -70,16 +69,22 @@
 .temp-boxes {
     background-color: rgba(158, 187, 237, 0.247);
     font-size: 50%;
-    color: white;
+    color: rgb(226, 255, 3);
     justify-content: center;
-    align-items: flex-start;
-    height: 20vh;
+    align-items: center;
+    height: 12vh;
     width: 20vw;
     display: flex;
-    margin-right: 1%;
+    margin-right: 2%;
     border: white solid 3px;
     box-shadow: white 2px 2px 12px;
     border-radius: 20px;
+
+}
+.temp-boxes:hover {
+    transform: scale(1.1);
+    border: rgb(0, 119, 255) solid 3px;
+
 
 }
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import "../css/dashboard.css";
+import WindGraph from './Radialbar';
 
 
 function Dashboard() {
@@ -22,16 +23,8 @@ function Dashboard() {
 								<div className='temp-boxes'>Sat</div>
 
 							</div>
+							<WindGraph />
 
-							<div className='other-weather-details'>
-							<div className='humidity'>Humidity</div>
-							<div className='humidity'>Wind</div>
-							<div className='humidity'>Feels Like</div>
-							<div className='humidity'>Precipitation</div>
-							<div className='humidity'>UV Index</div>
-							<div className='humidity'>AQI</div>
-
-						</div>
 						</div>
 					</div>
 
