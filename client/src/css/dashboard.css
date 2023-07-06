@@ -69,11 +69,13 @@
 .temp-boxes {
     background-color: rgba(158, 187, 237, 0.247);
     font-size: 50%;
-    color: rgb(226, 255, 3);
+    color: rgb(255, 255, 255);
     justify-content: center;
     align-items: center;
-    height: 12vh;
+    height: 15vh;
     width: 20vw;
+    flex-direction: column;
+
     display: flex;
     margin-right: 2%;
     border: white solid 3px;
@@ -81,10 +83,11 @@
     border-radius: 20px;
 
 }
+
+
 .temp-boxes:hover {
     transform: scale(1.1);
     border: rgb(0, 119, 255) solid 3px;
-
 
 }
 
