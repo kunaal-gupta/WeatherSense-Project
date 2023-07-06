@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 
-import Home from "./Home";
-import Contact from "./Contact";
-import About from "./About";
+import Home from "./Home.jsx";
+import Contact from "./Contact.jsx";
+import About from "./About.jsx";
 import Dashboard from "./Dashboard.jsx";
 
 export default function App() {

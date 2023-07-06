@@ -1,7 +1,25 @@
 import React from 'react';
+import "../css/dashboard.css";
 
-function Dashboard (){
-	return <h1>Welcome to the world of Geeks!</h1>
+
+function Dashboard() {
+	return (
+		<>
+			<div className="dash-background">
+				<div className="dash-section">
+					<div className="dash-empty-section">
+
+					</div>
+					<div className="dash-heading">
+			
+					</div>
+				</div>
+			</div>
+
+
+
+		</>
+	)
 }
 
 export default Dashboard;

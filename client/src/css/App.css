@@ -76,9 +76,9 @@ animation: border-icon 0.5s linear infinite;
   font-size: 2.5vw;
   font-weight:600;
   border: rgba(252, 252, 252, 0.591) solid;
-  /* background-image: url(./mountain.jpg);
-  background-position: 20%;
-  background-size: 100%; */
+  background-image: url(../../public/8140.jpg);
+  background-position: 10%;
+  background-size: 100%;
 
 }
 

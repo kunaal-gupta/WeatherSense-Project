@@ -1,0 +1,56 @@
+.dash-background{
+    height: 100vh;
+    width:  100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+  }
+    
+  
+  .dash-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-radius: 25px;
+    height: 80vh;
+    width: 70vw;
+    background-color: rgba(1, 66, 106, 0.445);
+    
+    
+  
+  }
+
+    
+
+  
+  
+  .dash-empty-section{
+    background-color: rgba(1, 66, 106, 0.445);
+    height: 80vh;
+    width: 13vw;
+    border-radius: 25px;
+
+  
+  
+  }
+
+
+  .dash-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(169, 222, 243);
+    border-radius: 60px 18px 18px 60px;
+    height: 79.5vh;
+    width: 69vw;
+    font-size: 2.5vw;
+    font-weight:600;
+    border: rgba(252, 252, 252, 0.591) solid;
+    background-image: url(../../public/6206160.jpg);
+    background-position: 10%;
+    background-size: 100%;
+  
+  }
+
