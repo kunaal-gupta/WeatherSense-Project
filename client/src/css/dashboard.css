@@ -26,9 +26,26 @@
     height: 80vh;
     width: 13vw;
     border-radius: 1em;
+}
 
+.Time-Section {
+    /* background-color: yellow; */
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.Other-Weather-Section {
+    /* background-color: greenyellow; */
+    height: 30%;
 
+}
+
+.Time {
+    color: white;
+    font-size: 1.8vw;
+    /* background-color: ORANGE; */
 }
 
 
@@ -91,14 +108,13 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-end;
-    /* gap: 4em; */
-    
+    gap: 1em;
+
 
 }
 
 .Wind {
-    height: 90%;
-    margin-bottom: 10%;
+    margin-bottom: 2%;
 
 }
 
@@ -125,7 +141,7 @@
 
 }
 
-.thermom{
+.thermom {
     background-color: rgb(35, 202, 149);
     width: 1vw;
 }
@@ -136,5 +152,3 @@
     cursor: pointer;
 
 }
-
-

@@ -14,6 +14,13 @@ function Dashboard() {
 			<div className="dash-background">
 				<div className="dash-section">
 					<div className="dash-left-section">
+						<div className='Time-Section'>
+							<div className='Time'>12:54 AM</div>
+
+						</div>
+						<div className='Other-Weather-Section'>
+
+						</div>
 
 					</div>
 					<div className="dash-right-section">
@@ -57,14 +64,14 @@ function Dashboard() {
 
 							</div>
 							<div className='dash-right-bottom-section'>
-					
+
 								<div className='thermom-section-left'>
 									<div className='thermom' style={{ height: Lheight + '%' }}></div>
 								</div>
 								<div className='Wind'><WindGraph /></div>
 								<div className='thermom-section-right'>
 									<div className='thermom' style={{ height: Rheight + '%' }}></div>
-								</div> 
+								</div>
 							</div>
 
 
