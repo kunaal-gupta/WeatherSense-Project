@@ -2,7 +2,7 @@ import React from 'react';
 import "../css/dashboard.css";
 import WindGraph from './Radialbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun, faMoon, faWind, faSnowflake, faCloud, faRainbow, faTint, faCloudSun } from '@fortawesome/free-solid-svg-icons';
+import { faSun, faWind, faSnowflake, faCloud, faTint, faCloudSun } from '@fortawesome/free-solid-svg-icons';
 
 
 function Dashboard() {

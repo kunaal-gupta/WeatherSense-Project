@@ -4,7 +4,9 @@ import { useEffect, React } from 'react';
 // Humidity
 // Wind
 // Precipitation
+
 // UV Index 
+// aqi
 
 // Feels like
 // Chances of rain
