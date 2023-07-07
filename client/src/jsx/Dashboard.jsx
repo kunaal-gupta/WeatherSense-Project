@@ -57,7 +57,9 @@ function Dashboard() {
 							<div className='dash-right-bottom-section'>
 								<div className='thermom'></div>
 								<div className='Wind'><WindGraph /></div>
-								<div className='thermom'></div>
+								<div className='thermom'>
+									
+								</div>
 							</div>
 
 

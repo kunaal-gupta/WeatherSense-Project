@@ -45,8 +45,8 @@
     font-weight: 600;
     border: rgba(252, 252, 252, 0.591) solid;
     background-image: url(../../public/6206160.jpg);
-    background-position: 10%;
-    background-size: 100%;
+    background-position: 60%;
+    background-size: 90%;
 
 }
 
@@ -104,7 +104,7 @@
 
 .thermom {
     height: 90%;
-    width: 10vw;
+    width: 1vw;
 }
 
 .temp-boxes:hover {
@@ -112,3 +112,5 @@
     border: rgb(0, 119, 255) solid 3px;
 
 }
+
+
