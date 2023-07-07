@@ -61,7 +61,7 @@ function Dashboard() {
 								<div className='thermom-section-left'>
 									<div className='thermom' style={{ height: Lheight + '%' }}></div>
 								</div>
-								{/* <div className='Wind'><WindGraph /></div> */}
+								<div className='Wind'><WindGraph /></div>
 								<div className='thermom-section-right'>
 									<div className='thermom' style={{ height: Rheight + '%' }}></div>
 								</div> 

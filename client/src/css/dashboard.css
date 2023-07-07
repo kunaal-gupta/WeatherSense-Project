@@ -16,9 +16,6 @@
     height: 80vh;
     width: 70vw;
     background-color: rgb(1, 66, 106);
-
-
-
 }
 
 
@@ -93,7 +90,9 @@
     width: 100%;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: flex-end;
+    /* gap: 4em; */
+    
 
 }
 
@@ -104,9 +103,9 @@
 }
 
 .thermom-section-left {
+    margin-bottom: 5%;
     margin-left: 10%;
-    margin-right: 15%;
-    height: 90%;
+    height: 70%;
     width: 1vw;
     border: solid white 0.1em;
     border-radius: 1em;
@@ -115,8 +114,9 @@
 }
 
 .thermom-section-right {
-    margin-left: 1%;
-    height: 90%;
+    margin-bottom: 5%;
+    /* margin-left: 1%; */
+    height: 70%;
     width: 1vw;
     border: solid white 0.1em;
     border-radius: 1em;
