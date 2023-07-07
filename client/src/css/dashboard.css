@@ -56,9 +56,10 @@
     align-items: center;
     height: 100%;
     width: 100%;
+    /* background-color: red; */
 }
 
-.daily-temp {
+.daily-right-top-section {
     margin-top: 2%;
     height: 100vh;
     width: 100vh;
@@ -79,7 +80,7 @@
     background-color: rgba(0, 179, 255, 0.338);
     display: flex;
     margin-right: 2%;
-    border: white solid 3px;
+    border: solid white 0.15em;
     box-shadow: white 2px 2px 12px;
     border-radius: 20px;
 
@@ -88,7 +89,7 @@
 .dash-right-bottom-section {
     /* background-color: orange; */
     display: flex;
-    height: 100vh;
+    height: 500%;
     width: 100%;
     flex-direction: row;
     justify-content: flex-start;
@@ -107,7 +108,7 @@
     margin-right: 15%;
     height: 90%;
     width: 1vw;
-    border: solid white 2px;
+    border: solid white 0.1em;
     border-radius: 25px;
     display: flex;
     align-items: flex-end;
@@ -117,7 +118,7 @@
     margin-left: 1%;
     height: 90%;
     width: 1vw;
-    border: solid white 2px;
+    border: solid white 0.1em;
     border-radius: 25px;
     display: flex;
     align-items: flex-end;
