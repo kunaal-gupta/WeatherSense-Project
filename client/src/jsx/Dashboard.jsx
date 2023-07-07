@@ -6,6 +6,9 @@ import { faSun, faMoon, faWind, faSnowflake, faCloud, faRainbow, faTint, faCloud
 
 
 function Dashboard() {
+	let Lheight = 70;
+	let Rheight = 40;
+
 	return (
 		<>
 			<div className="dash-background">
@@ -55,10 +58,13 @@ function Dashboard() {
 
 							</div>
 							<div className='dash-right-bottom-section'>
-								<div className='thermom'></div>
+					
+								<div className='thermom-section-left'>
+									<div className='thermom' style={{ height: Lheight + '%' }}></div>
+								</div>
 								<div className='Wind'><WindGraph /></div>
-								<div className='thermom'>
-									
+								<div className='thermom-section-right'>
+									<div className='thermom' style={{ height: Rheight + '%' }}></div>
 								</div>
 							</div>
 
