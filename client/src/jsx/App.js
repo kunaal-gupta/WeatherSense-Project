@@ -11,7 +11,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <nav>
-        <Link to="/">Home</Link>
+        <Link to="/login">Home</Link>
+        <Link to="/Register">Register</Link>
+
         <Link to="/dashboard">Dashboard</Link>
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
@@ -20,7 +22,9 @@ export default function App() {
       </nav>
 
         <Route exact path="/dashboard" component={Dashboard} />
-        <Route exact path="/" component={Home} />
+        <Route exact path="/login" component={Home} />
+        <Route path="/register" component={Home} />
+
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
         <Route path="/radialgraph" component={WindGraph} />;
