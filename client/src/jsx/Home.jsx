@@ -2,7 +2,7 @@ import { WiDaySnowWind } from "react-icons/wi";
 import { Link } from "react-router-dom";
 import Login from "./LoginForm.jsx";
 import Register from "./RegisterForm.jsx";
-import "../css/App.css"
+import "../css/Home.css"
 import React, { useEffect } from 'react';
 
 

@@ -2,22 +2,20 @@
     height: 5vh;
     width: 20vw;
     margin-top: 4vh;
-    font-size: 20px;
+    font-size: 55%;
     padding: 2%;
     background-color: rgba(22, 157, 225, 0.247);
     color: rgb(255, 255, 255);
     border-radius: 10px;
     font-weight: bold;
     border: white solid;
-
-
 }
 
 .Email {
     height: 5vh;
     width: 20vw;
     padding: 2%;
-    font-size: 20px;
+    font-size: 55%;
     background-color: rgba(22, 157, 225, 0.247);
     color: rgb(255, 255, 255);
     border-radius: 10px;
@@ -30,7 +28,7 @@
     height: 5vh;
     width: 20vw;
     padding: 2%;
-    font-size: 20px;
+    font-size: 55%;
     background-color: rgba(22, 157, 225, 0.247);
     color: rgb(255, 255, 255);
     border-radius: 10px;
@@ -43,7 +41,7 @@
     margin-top: 5vh;
     padding: 1vh 4vh 1vh 4vh;
     width: 20vw;
-    font-size: 25px;
+    font-size: 60%;
     cursor: pointer;
 
     color: white;
