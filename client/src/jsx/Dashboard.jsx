@@ -19,6 +19,9 @@ function Dashboard() {
 
 						</div>
 						<div className='Other-Weather-Section'>
+							<div className='Wind-Speed'>Wind-Speed: </div>
+							<div className='Precipition'>Precipition:</div>
+							<div className='Humidity'>Humidity: </div>
 
 						</div>
 
