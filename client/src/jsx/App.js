@@ -12,7 +12,6 @@ export default function App() {
     <BrowserRouter>
       <nav>
         <Link to="/login">Home</Link>
-        <Link to="/Register">Register</Link>
 
         <Link to="/dashboard">Dashboard</Link>
         <Link to="/about">About</Link>

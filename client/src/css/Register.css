@@ -1,0 +1,76 @@
+.Name {
+    height: 5vh;
+    width: 20vw;
+    margin-top: 4vh;
+    font-size: 20px;
+    padding: 2%;
+    background-color: rgba(22, 157, 225, 0.247);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-weight: bold;
+    border: white solid;
+
+
+}
+
+.Email {
+    height: 5vh;
+    width: 20vw;
+    padding: 2%;
+    font-size: 20px;
+    background-color: rgba(22, 157, 225, 0.247);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-weight: bold;
+    border: white solid;
+
+}
+
+.City {
+    height: 5vh;
+    width: 20vw;
+    padding: 2%;
+    font-size: 20px;
+    background-color: rgba(22, 157, 225, 0.247);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-weight: bold;
+    border: white solid;
+
+}
+
+.RegisterButton {
+    margin-top: 5vh;
+    padding: 1vh 4vh 1vh 4vh;
+    width: 20vw;
+    font-size: 25px;
+    cursor: pointer;
+
+    color: white;
+    font-weight: 700;
+    border: rgba(72, 183, 231, 0.591) solid;
+    border-radius: 118px;
+    background-color: rgb(61, 154, 246);
+    box-shadow: 4px 8px 16px rgba(72, 183, 231, 0.591);
+}
+
+
+
+input::placeholder {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+
+.form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vh;
+
+}
+
+input:focus {
+    background-color: rgb(19, 121, 237);
+    border-bottom: white 5px solid;
+}
