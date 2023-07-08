@@ -109,12 +109,18 @@
     margin-top: 25%;
     width: 50%;
 
-    text-align: center;
-    align-content: center;
+    align-items: center;
+    justify-content: center;
     padding: 0.5em 0.1em 0.5em 0.11em;
     font-weight: bold;
     border: white 2px solid;
+    cursor: pointer;
+    flex-direction: row;
+    display: flex;
+}
 
+.Temperature:hover {
+    transform: scale(1.1);
 }
 
 .feels-like{

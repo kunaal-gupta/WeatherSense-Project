@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState} from 'react';
 import "../css/dashboard.css";
 import WindGraph from './Radialbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun, faWind, faSnowflake, faCloud, faTint, faCloudSun, faClock, faTemperature0, faTemperatureFull } from '@fortawesome/free-solid-svg-icons';
+import { faClock } from '@fortawesome/free-solid-svg-icons';
+
 
 
 function Dashboard() {
+	const [Temp, setTemp] = useState(20);
+	const [TempUnit, setTempUnit] = useState('C'); 
+
 	let Lheight = 70;
 	let Rheight = 40;
 
@@ -16,7 +20,7 @@ function Dashboard() {
 	let Visibility = 4;
 	let Gust = 6;
 
-	let Temp = 20;
+	// let Temp = 20;
 	let FeelsLike = 0;
 	let Wind = 0;
 	let wind_degree = 270;
@@ -27,18 +31,17 @@ function Dashboard() {
 	const currentMinute = currentTime.getMinutes();
 	const currentSecond = currentTime.getSeconds();
 
+
 	function PressureChange() {
 		const unitDiv = document.getElementById('pUnit');
 		const valDiv = document.getElementById('pressVal');
 
-		if (unitDiv.textContent == 'mb') {
+		if (unitDiv.textContent === 'mb') {
 			unitDiv.textContent = 'in';
-			valDiv.textContent = Pressure * 2
-
+			valDiv.textContent = Pressure * 2;
 		} else {
-			unitDiv.textContent = 'mb'
-			valDiv.textContent = Pressure
-
+			unitDiv.textContent = 'mb';
+			valDiv.textContent = Pressure;
 		}
 	}
 
@@ -46,14 +49,12 @@ function Dashboard() {
 		const unitDiv = document.getElementById('visUnit');
 		const valDiv = document.getElementById('visVal');
 
-		if (unitDiv.textContent == 'km') {
+		if (unitDiv.textContent === 'km') {
 			unitDiv.textContent = 'mile';
-			valDiv.textContent = Visibility * 2
-
+			valDiv.textContent = Visibility * 2;
 		} else {
-			unitDiv.textContent = 'km'
-			valDiv.textContent = Visibility
-
+			unitDiv.textContent = 'km';
+			valDiv.textContent = Visibility;
 		}
 	}
 
@@ -61,14 +62,22 @@ function Dashboard() {
 		const unitDiv = document.getElementById('gustUnit');
 		const valDiv = document.getElementById('gustVal');
 
-		if (unitDiv.textContent == 'mph') {
+		if (unitDiv.textContent === 'mph') {
 			unitDiv.textContent = 'kph';
-			valDiv.textContent = Gust * 2
-
+			valDiv.textContent = Gust * 2;
 		} else {
-			unitDiv.textContent = 'mph'
-			valDiv.textContent = Gust
+			unitDiv.textContent = 'mph';
+			valDiv.textContent = Gust;
+		}
+	}
 
+	function changeTempUnit() {
+		if (TempUnit === 'C') {
+			setTempUnit('F');
+			setTemp((Temp * 9/5) + 32);
+		} else {
+			setTempUnit('C');
+			setTemp((Temp -32)*5/9);
 		}
 	}
 
@@ -89,9 +98,9 @@ function Dashboard() {
 
 							<div className='Latitude'>{`Latitiude: ${Latitude}`}</div>
 							<div className='Longitude'>{`Longitude: ${Longitude}`}</div>
-							<div className='Temperature'>
-								{`${Temp}°C`}
-						
+							<div className='Temperature' onClick={changeTempUnit}>
+								<div className='tempVal'>{`${Temp}°`} </div>
+								<div className='tempUnit'> {TempUnit}</div>
 							</div>
 							<div className='feels-like'>Feels like {FeelsLike}</div>
 
