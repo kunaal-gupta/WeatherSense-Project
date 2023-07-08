@@ -5,11 +5,13 @@ import { useEffect, React } from 'react';
 // Wind
 // Precipitation
 
-// UV Index 
-// aqi
+// Pressure
+//Visibility
 
+// UV Index 
 // Feels like
 // Chances of rain
+// gust
 
 export default function Chart() {
     useEffect(()=> {

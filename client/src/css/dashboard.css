@@ -33,7 +33,7 @@
 .dash-right-section {
 
     /* background-color: rgb(169, 222, 243); */
-    border-radius: 2em 0.5em 0.5em 2em;
+    border-radius: 1.4em 0.5em 0.5em 1.4em;
     height: 79.5vh;
     width: 80vw;
     font-size: 2.5vw;
@@ -47,17 +47,10 @@
 }
 
 
-.Time-Section {
-    /* background-color: yellow; */
-    height: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .Other-Weather-Section {
     /* background-color: greenyellow; */
-    height: 30%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -65,18 +58,60 @@
 
 }
 
-.Wind-Speed, .Precipition, .Humidity{
-    color: white;
-    font-size: 1.3vw;
-    margin-left: 5%;
+.Pressure, .Visibility, .Gust{
+    color: rgb(255, 255, 255);
+    font-size: 1.2vw;
+    background-color: orange;
+    margin-top: 0.5em;
+    padding: 0.5em 1em 0.5em 1em;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.unit{
+    background-color: rgb(218, 42, 42);
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    margin-right: 5%;
+    margin-left: 2%;
+    width: 15%;
+    text-align: center;
+
+}
+.Time-Section {
+    /* background-color: yellow; */
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .Time {
     color: white;
     font-size: 1.8vw;
     /* background-color: ORANGE; */
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+    flex-direction: column;
     animation: Time-blink 2s linear infinite;
 
+}
+
+.Location{
+    color: rgb(255, 255, 255);
+    font-size: 1vw;
+    margin-top: 5%;
+    /* background-color: green; */
+}
+
+.Latitude, .Longitude{
+    color: rgb(255, 255, 255);
+    font-size: 1vw;
+    /* margin-top: 5%; */
 }
 
 @keyframes Time-blink {
@@ -147,7 +182,7 @@
 }
 
 .Wind {
-    margin-bottom: 2%;
+    margin-bottom: 10%;
     width: 15em; 
     height: 10em; 
 }

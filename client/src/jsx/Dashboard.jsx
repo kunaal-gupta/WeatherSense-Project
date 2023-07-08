@@ -2,12 +2,26 @@ import React from 'react';
 import "../css/dashboard.css";
 import WindGraph from './Radialbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun, faWind, faSnowflake, faCloud, faTint, faCloudSun } from '@fortawesome/free-solid-svg-icons';
+import { faSun, faWind, faSnowflake, faCloud, faTint, faCloudSun, faClock } from '@fortawesome/free-solid-svg-icons';
 
 
 function Dashboard() {
 	let Lheight = 70;
 	let Rheight = 40;
+
+	let Longitude = -113.5;
+	let Latitude = 53.55;
+
+	let Pressure = 0;
+	let Visibility = 0;
+	let Gust = 0;
+
+	const currentTime = new Date();
+	const currentHour = currentTime.getHours();
+	const currentMinute = currentTime.getMinutes();
+	const currentSecond = currentTime.getSeconds();
+
+
 
 	return (
 		<>
@@ -15,13 +29,37 @@ function Dashboard() {
 				<div className="dash-section">
 					<div className="dash-left-section">
 						<div className='Time-Section'>
-							<div className='Time'>12:54 AM</div>
+							<div className='Time'>
+								<FontAwesomeIcon icon={faClock} size='xl' style={{ color: 'White' }} />
+
+								{` ${currentHour}:${currentMinute}:${currentSecond}`}
+							</div>
+							<div className='Location'>Edmonton, Alberta, Canada</div><br></br>
+
+							<div className='Latitude'>{`Latitiude: ${Latitude}`}</div>
+							<div className='Longitude'>{`Longitude: ${Longitude}`}</div>
+
+
 
 						</div>
 						<div className='Other-Weather-Section'>
-							<div className='Wind-Speed'>Wind-Speed: </div>
-							<div className='Precipition'>Precipition:</div>
-							<div className='Humidity'>Humidity: </div>
+							<div className='Pressure'>
+								<div>Pressure </div>
+								<div className='unit'> in  </div>
+								<div>{Pressure} </div>
+
+							</div>
+							<div className='Visibility'>
+								<div>Visibility .</div>
+								<div className='unit'> km  </div>
+								<div>{Visibility}  </div>
+							</div>
+
+							<div className='Gust'>
+								<div>WindGust</div>
+								<div className='unit'> km  </div>
+								<div>{Gust}  </div>
+							</div>
 
 						</div>
 
