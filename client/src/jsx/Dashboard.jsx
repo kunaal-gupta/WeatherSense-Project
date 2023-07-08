@@ -10,6 +10,10 @@ function Dashboard() {
 	const [Temp, setTemp] = useState(20);
 	const [TempUnit, setTempUnit] = useState('C'); 
 
+	const [FeelsLike, setFeelsLike] = useState(20);
+	const [FeelsLikeUnit, setFeelsLikeUnit] = useState('C'); 
+
+
 	let Lheight = 70;
 	let Rheight = 40;
 
@@ -21,7 +25,6 @@ function Dashboard() {
 	let Gust = 6;
 
 	// let Temp = 20;
-	let FeelsLike = 0;
 	let Wind = 0;
 	let wind_degree = 270;
 	let wind_dir = 'N';
@@ -74,10 +77,14 @@ function Dashboard() {
 	function changeTempUnit() {
 		if (TempUnit === 'C') {
 			setTempUnit('F');
+			setFeelsLikeUnit('F')
 			setTemp((Temp * 9/5) + 32);
+			setFeelsLike((FeelsLike * 9/5) + 32)
 		} else {
 			setTempUnit('C');
+			setFeelsLikeUnit('F')
 			setTemp((Temp -32)*5/9);
+			setFeelsLike((FeelsLike -32)*5/9)
 		}
 	}
 
@@ -102,7 +109,7 @@ function Dashboard() {
 								<div className='tempVal'>{`${Temp}°`} </div>
 								<div className='tempUnit'> {TempUnit}</div>
 							</div>
-							<div className='feels-like'>Feels like {FeelsLike}</div>
+							<div className='feels-like'>Feels like {FeelsLike}°C</div>
 
 
 						</div>
