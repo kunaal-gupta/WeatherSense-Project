@@ -2,7 +2,7 @@ import React from 'react';
 import "../css/dashboard.css";
 import WindGraph from './Radialbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun, faWind, faSnowflake, faCloud, faTint, faCloudSun, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faSun, faWind, faSnowflake, faCloud, faTint, faCloudSun, faClock, faTemperature0, faTemperatureFull } from '@fortawesome/free-solid-svg-icons';
 
 
 function Dashboard() {
@@ -15,6 +15,8 @@ function Dashboard() {
 	let Pressure = 0;
 	let Visibility = 0;
 	let Gust = 0;
+
+	let Temp = 0;
 
 	const currentTime = new Date();
 	const currentHour = currentTime.getHours();
@@ -38,7 +40,9 @@ function Dashboard() {
 
 							<div className='Latitude'>{`Latitiude: ${Latitude}`}</div>
 							<div className='Longitude'>{`Longitude: ${Longitude}`}</div>
-
+							<div className='Temperature'>
+								<FontAwesomeIcon icon={faTemperature0} size='xl' style={{ color: 'White', marginRight: '2%' }} />
+								{`${Temp} °C`}</div>
 
 
 						</div>

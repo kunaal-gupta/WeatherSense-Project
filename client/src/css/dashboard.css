@@ -101,6 +101,16 @@
 
 }
 
+.Temperature{
+    color: rgb(255, 255, 255);
+    font-size: 1.8vw;
+    background-color: rgba(240, 219, 101, 0.477);
+    margin-top: 25%;
+    width: 50%;
+    text-align: center;
+    align-content: center;
+}
+
 .Location{
     color: rgb(255, 255, 255);
     font-size: 1vw;
