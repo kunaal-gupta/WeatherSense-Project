@@ -12,11 +12,9 @@ export default function Home() {
     const currentURL = window.location.href;
 
     if (currentURL.includes('/login')) {
-      console.log('/login is present in the URL');
       document.getElementById('register').style.display = 'none';
 
     } else if (currentURL.includes('/register')) {
-      console.log('/register is present in the URL');
       document.getElementById('login').style.display = 'none';
 
     }

@@ -5,7 +5,7 @@ const url = "mongodb+srv://kunaalgupta:kDGpvJLZDibg7PbR@clusterinit.ss7ajbc.mong
 const client = new MongoClient(url);
  
  // The database to use
- const dbName = "test";
+ const dbName = "WeatherSenseDB";
                       
  async function run() {
     try {
@@ -14,23 +14,28 @@ const client = new MongoClient(url);
          const db = client.db(dbName);
 
          // Use the collection "people"
-         const col = db.collection("people");
+         const col = db.collection("LoginAuthentication");
 
          // Construct a document                                                                                                                                                              
-         let personDocument = {
-             "name": { "first": "Alan", "last": "Turing" },
-             "birth": new Date(1912, 5, 23), // May 23, 1912                                                                                                                                 
-             "death": new Date(1954, 5, 7),  // May 7, 1954                                                                                                                                  
-             "contribs": [ "Turing machine", "Turing test", "Turingery" ],
-             "views": 1250000
-         }
+        //  let Credentials = [
+        //     {'Username': 'Kunaal', 'Password': 'Gupta'},
+        //     {'Username': 'Ishaan', 'Password': 'Gupta'},
+        //     {'Username': 'Raj', 'Password': 'rr'},
+        //     {'Username': 'Sohan', 'Password': 'rr'},
+
+        //  ]
 
          // Insert a single document, wait for promise so we can read it back
-         const p = await col.insertOne(personDocument);
+        //  const p = await col.insertMany(Credentials);
+        const query = { 'Username': 'Kunaal', 'Password': 'Guhpta' };
+        const result = await col.findOne(query);
+    
+        console.log(result);
+         
          // Find one document
-         const myDoc = await col.findOne();
-         // Print to the console
-         console.log(myDoc);
+        //  const myDoc = await col.findOne();
+        //  // Print to the console
+        //  console.log(myDoc);
 
         } catch (err) {
          console.log(err.stack);
@@ -41,4 +46,5 @@ const client = new MongoClient(url);
     }
 }
 
-run().catch(console.dir);
+// run().catch(console.dir);
+run()
