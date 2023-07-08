@@ -103,7 +103,7 @@ input::placeholder {
     animation: loading 1s linear infinite;
     height: 1.1em;
     width: 1.1em;
-    display: none;
+    /* display: none; */
   
     
   }

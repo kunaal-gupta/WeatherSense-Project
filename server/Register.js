@@ -10,19 +10,25 @@ async function RegisterCred(Username, Password, Name, City) {
         const db = client.db('WeatherSenseDB');
         const col = db.collection('LoginAuthentication');
 
-        const query = { 'Username': Username, 'Password': Password, 'Name': Name, 'City': City};
-        const result = await col.insertOne(query)
+        const query = { 'Username': Username, 'Password': Password, 'Name': Name, 'City': City };
+        const result = await col.findOne(query);
+        
 
         if (result) {
             return 1;
         } else {
-            return 0
+            const result = await col.insertOne(query);
+            if (result) {
+                return 2;
+            } else {
+                return 0
+            }
         }
     }
     finally {
         await client.close();
     }
-    
+
 }
 
 
