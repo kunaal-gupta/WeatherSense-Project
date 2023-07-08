@@ -12,16 +12,61 @@ function Dashboard() {
 	let Longitude = -113.5;
 	let Latitude = 53.55;
 
-	let Pressure = 0;
-	let Visibility = 0;
-	let Gust = 0;
+	let Pressure = 5;
+	let Visibility = 4;
+	let Gust = 6;
 
-	let Temp = 0;
+	let Temp = 20;
 
 	const currentTime = new Date();
 	const currentHour = currentTime.getHours();
 	const currentMinute = currentTime.getMinutes();
 	const currentSecond = currentTime.getSeconds();
+
+	function PressureChange() {
+		const unitDiv = document.getElementById('pUnit');
+		const valDiv = document.getElementById('pressVal');
+
+		if (unitDiv.textContent == 'mb') {
+			unitDiv.textContent = 'in';
+			valDiv.textContent = Pressure * 2
+
+		} else {
+			unitDiv.textContent = 'mb'
+			valDiv.textContent = Pressure
+
+		}
+	}
+
+	function VisibilityChange() {
+		const unitDiv = document.getElementById('visUnit');
+		const valDiv = document.getElementById('visVal');
+
+		if (unitDiv.textContent == 'km') {
+			unitDiv.textContent = 'mile';
+			valDiv.textContent = Visibility * 2
+
+		} else {
+			unitDiv.textContent = 'km'
+			valDiv.textContent = Visibility
+
+		}
+	}
+
+	function GustChange() {
+		const unitDiv = document.getElementById('gustUnit');
+		const valDiv = document.getElementById('gustVal');
+
+		if (unitDiv.textContent == 'mph') {
+			unitDiv.textContent = 'kph';
+			valDiv.textContent = Gust * 2
+
+		} else {
+			unitDiv.textContent = 'mph'
+			valDiv.textContent = Gust
+
+		}
+	}
 
 
 
@@ -41,28 +86,28 @@ function Dashboard() {
 							<div className='Latitude'>{`Latitiude: ${Latitude}`}</div>
 							<div className='Longitude'>{`Longitude: ${Longitude}`}</div>
 							<div className='Temperature'>
-								<FontAwesomeIcon icon={faTemperature0} size='xl' style={{ color: 'White', marginRight: '2%' }} />
-								{`${Temp} °C`}</div>
+								{`${Temp}°C`}
+							</div>
 
 
 						</div>
 						<div className='Other-Weather-Section'>
 							<div className='Pressure'>
 								<div>Pressure </div>
-								<div className='unit'> in  </div>
-								<div>{Pressure} </div>
+								<div className='unit' id='pUnit' onClick={PressureChange}> in  </div>
+								<div id='pressVal'>{Pressure} </div>
 
 							</div>
 							<div className='Visibility'>
 								<div>Visibility .</div>
-								<div className='unit'> km  </div>
-								<div>{Visibility}  </div>
+								<div className='unit' id='visUnit' onClick={VisibilityChange}> km  </div>
+								<div id='visVal'>{Visibility}  </div>
 							</div>
 
 							<div className='Gust'>
 								<div>WindGust</div>
-								<div className='unit'> km  </div>
-								<div>{Gust}  </div>
+								<div className='unit' id='gustUnit' onClick={GustChange}> km  </div>
+								<div id='gustVal'>{Gust}  </div>
 							</div>
 
 						</div>

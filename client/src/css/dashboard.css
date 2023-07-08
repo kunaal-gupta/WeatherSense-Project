@@ -75,8 +75,9 @@
     padding: 0.5em 0.5em 0.5em 0.5em;
     margin-right: 5%;
     margin-left: 2%;
-    width: 15%;
+    width: 18%;
     text-align: center;
+    cursor: pointer;
 
 }
 .Time-Section {
@@ -104,11 +105,16 @@
 .Temperature{
     color: rgb(255, 255, 255);
     font-size: 1.8vw;
-    background-color: rgba(240, 219, 101, 0.477);
+    background-color: rgba(250, 209, 5, 0.806);
     margin-top: 25%;
     width: 50%;
+
     text-align: center;
     align-content: center;
+    padding: 0.5em 0.1em 0.5em 0.11em;
+    font-weight: bold;
+    border: white 5px solid;
+
 }
 
 .Location{
