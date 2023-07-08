@@ -1,18 +1,6 @@
 import React from "react";
 import ReactApexChart from 'react-apexcharts';
 
-// import axios from 'axios';
-
-// const data = { name: 'John', email: 'john@example.com' };
-// axios.post('http://localhost:5000/server01', data)
-//   .then(response => {
-//     // Handle the response data
-//     console.log(response.data);
-//   })
-//   .catch(error => {
-//     // Handle any errors
-//     console.error('hi', error);
-//   });
 
 export default function WindGraph() {
   const series = [180, 120];

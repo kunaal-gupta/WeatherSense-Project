@@ -7,18 +7,7 @@ import React, { useEffect } from 'react';
 
 
 
-export default function Home() {
-  useEffect(() => {
-    const currentURL = window.location.href;
-
-    if (currentURL.includes('/login')) {
-      document.getElementById('register').style.display = 'none';
-
-    } else if (currentURL.includes('/register')) {
-      document.getElementById('login').style.display = 'none';
-
-    }
-  }, []);
+export default function LoadWelcome() {
 
   return (
 
@@ -31,17 +20,11 @@ export default function Home() {
           </div>
           <div className="Welcome-heading">
             <div> Welcome to Weather<span style={{ color: 'White' }}>Sense</span></div>
-            <div id="login">
-              <Login />
-            </div>
-            <div id="register">
-              < Register />
-            </div>
+
             
-            {/* <Link to="/dashboard">
+            <Link to="/login">
               <button className="Welcome-button">Load Dashboard</button>
-            </Link>            */}
-            {/* <div className="loader"></div> */}
+            </Link>
 
           </div>
         </div>

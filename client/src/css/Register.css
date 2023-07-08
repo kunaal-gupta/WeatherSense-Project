@@ -1,6 +1,6 @@
 .Name {
-    height: 5vh;
-    width: 20vw;
+    height: 4.5vh;
+    width: 18vw;
     margin-top: 4vh;
     font-size: 55%;
     padding: 2%;
@@ -9,11 +9,24 @@
     border-radius: 10px;
     font-weight: bold;
     border: white solid;
+} 
+
+.Password {
+    height: 4.5vh;
+    width: 18vw;
+    margin-top: 4vh;
+    font-size: 55%;
+    padding: 2%;
+    background-color: rgba(22, 157, 225, 0.247);
+    color: rgb(240, 25, 25);
+    border-radius: 10px;
+    font-weight: bold;
+    border: white solid;
 }
 
 .Email {
-    height: 5vh;
-    width: 20vw;
+    height: 4.5vh;
+    width: 18vw;
     padding: 2%;
     font-size: 55%;
     background-color: rgba(22, 157, 225, 0.247);
@@ -21,12 +34,11 @@
     border-radius: 10px;
     font-weight: bold;
     border: white solid;
-
 }
 
 .City {
-    height: 5vh;
-    width: 20vw;
+    height: 4.5vh;
+    width: 18vw;
     padding: 2%;
     font-size: 55%;
     background-color: rgba(22, 157, 225, 0.247);
@@ -34,7 +46,6 @@
     border-radius: 10px;
     font-weight: bold;
     border: white solid;
-
 }
 
 .RegisterButton {
@@ -43,7 +54,6 @@
     width: 20vw;
     font-size: 60%;
     cursor: pointer;
-
     color: white;
     font-weight: 700;
     border: rgba(72, 183, 231, 0.591) solid;
@@ -73,43 +83,37 @@ input:focus {
     border-bottom: white 5px solid;
 }
 
-.loader{
+.loader {
     background-color: rgba(22, 157, 225, 0.247);
-    border-top:  rgb(255, 132, 0) 0.2em solid;
+    border-top: rgb(255, 132, 0) 0.2em solid;
     border-bottom: rgb(255, 132, 0) 0.2em solid;
     border-left: white 0.2em solid;
     border-right: rgb(99, 179, 229) 0.2em solid;
     border-radius: 50%;
-
     animation: loading 1s linear infinite;
     height: 2.1em;
     width: 2.1em;
-  
-    
-  }
-  
-  @keyframes loading {
+}
+
+@keyframes loading {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
+}
 
 
-  .ProfileExists{
+.ProfileExists {
     padding: 0.5vh 2vh 0.5vh 2vh;
     width: 20vw;
     font-size: 50%;
     text-align: center;
-
     color: rgb(247, 247, 247);
     font-weight: 700;
-    /* border: rgba(72, 183, 231, 0.591) solid; */
     border-radius: 118px;
-    /* background-color: rgb(61, 154, 246); */
     box-shadow: 4px 8px 16px rgba(72, 183, 231, 0.591);
     display: none;
-  }
-  
+}

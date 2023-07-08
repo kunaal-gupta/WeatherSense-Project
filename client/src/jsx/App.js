@@ -6,6 +6,7 @@ import Contact from "./Contact.jsx";
 import About from "./About.jsx";
 import Dashboard from "./Dashboard.jsx";
 import WindGraph from "./Radialbar.jsx";
+import LoadWelcome from './Welcome.jsx'
 
 export default function App() {
   return (
@@ -21,6 +22,8 @@ export default function App() {
       </nav>
 
         <Route exact path="/dashboard" component={Dashboard} />
+        <Route exact path="/" component={LoadWelcome} />
+
         <Route exact path="/login" component={Home} />
         <Route path="/register" component={Home} />
 
