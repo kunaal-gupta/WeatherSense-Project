@@ -1,17 +1,20 @@
 import ApexCharts from 'apexcharts';
 import { useEffect, React } from 'react';
 
-// Humidity
+// Feels like
+
+//left pane ------------
 // Wind
 // Precipitation
-
 // Pressure
-//Visibility
 
+//thermomo----------
+//Visibility
 // UV Index 
-// Feels like
+
+//meter ----------
+// Humidity
 // Chances of rain
-// gust
 
 export default function Chart() {
     useEffect(()=> {

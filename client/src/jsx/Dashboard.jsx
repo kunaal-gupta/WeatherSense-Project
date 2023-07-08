@@ -17,6 +17,10 @@ function Dashboard() {
 	let Gust = 6;
 
 	let Temp = 20;
+	let FeelsLike = 0;
+	let Wind = 0;
+	let wind_degree = 270;
+	let wind_dir = 'N';
 
 	const currentTime = new Date();
 	const currentHour = currentTime.getHours();
@@ -87,7 +91,9 @@ function Dashboard() {
 							<div className='Longitude'>{`Longitude: ${Longitude}`}</div>
 							<div className='Temperature'>
 								{`${Temp}°C`}
+						
 							</div>
+							<div className='feels-like'>Feels like {FeelsLike}</div>
 
 
 						</div>
@@ -116,41 +122,8 @@ function Dashboard() {
 					<div className="dash-right-section">
 						<div className='dash-right-content'>
 							<div className='daily-right-top-section'>
-								<div className='temp-boxes'>
-									<div><FontAwesomeIcon icon={faSun} size='xl' style={{ color: '#ff7b00' }} /></div>
-									<div style={{ marginTop: '10%', fontSize: '80%' }}>Mon</div>
-									<div style={{ marginTop: '1%', fontSize: '80%' }}>12°C</div>
-								</div><div className='temp-boxes'>
-									<div><FontAwesomeIcon icon={faCloudSun} size='xl' style={{ color: 'Yellow' }} /></div>
-									<div style={{ marginTop: '10%', fontSize: '80%' }}>Tues</div>
-									<div style={{ marginTop: '1%', fontSize: '80%' }}>12°C</div>
 
-
-								</div><div className='temp-boxes'>
-									<div><FontAwesomeIcon icon={faTint} size='xl' style={{ color: 'SkyBlue' }} /></div>
-									<div style={{ marginTop: '10%', fontSize: '80%' }}>Wed</div>
-									<div style={{ marginTop: '1%', fontSize: '80%' }}>12°C</div>
-
-
-								</div><div className='temp-boxes'>
-									<div><FontAwesomeIcon icon={faCloud} size='xl' style={{ color: 'Gray' }} /></div>
-									<div style={{ marginTop: '10%', fontSize: '80%' }}>Thur</div>
-									<div style={{ marginTop: '1%', fontSize: '80%' }}>12°C</div>
-
-
-								</div><div className='temp-boxes'>
-									<div><FontAwesomeIcon icon={faSnowflake} size='xl' style={{ color: 'white' }} /></div>
-									<div style={{ marginTop: '10%', fontSize: '80%' }}>Fri</div>
-									<div style={{ marginTop: '1%', fontSize: '80%' }}>12°C</div>
-
-
-								</div><div className='temp-boxes'>
-									<div><FontAwesomeIcon icon={faWind} size='xl' style={{ color: '#ff7b00' }} /></div>
-									<div style={{ marginTop: '10%', fontSize: '80%' }}>Sat</div>
-									<div style={{ marginTop: '1%', fontSize: '80%' }}>12°C</div>
-
-
-								</div>
+								<div className='Wind'>Wind {Wind} mph {wind_degree}° {wind_dir}  </div>
 
 							</div>
 							<div className='dash-right-bottom-section'>
@@ -158,7 +131,7 @@ function Dashboard() {
 								<div className='thermom-section-left'>
 									<div className='thermom' style={{ height: Lheight + '%' }}></div>
 								</div>
-								<div className='Wind'><WindGraph /></div>
+								<div className='WindGraph'><WindGraph /></div>
 								<div className='thermom-section-right'>
 									<div className='thermom' style={{ height: Rheight + '%' }}></div>
 								</div>
