@@ -43,8 +43,8 @@ function Login({ history }) {
 
   return (
     <form className="form" onSubmit={SendLoginData}>
-      <input className='Username' type="text" placeholder="Username" onChange={(e) => setUsername(e.target.value)} />
-      <input className='Password' type="password" placeholder="Password" onChange={(b) => setPassword(b.target.value)} />
+      <input className='Username' type="text" placeholder="Username" required onChange={(e) => setUsername(e.target.value)} />
+      <input className='Password' type="password" placeholder="Password" required onChange={(b) => setPassword(b.target.value)} />
       <div className="IncorrectIdPwd" id='IncorrectIdPwd'>Incorrect Username or password</div>
       <input className='Submit' id='Submit' type='submit' />
       <Link to="/register">
