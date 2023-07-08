@@ -47,7 +47,7 @@ function Register({ history }) {
             <input className='RegisterButton' type='submit' value={'Submit & Register'} />
             <div className="ProfileExists"> Profile already exists</div>
 
-            <div className="loader" id='loader'>rer</div>
+            <div className="loader" id='loader'></div>
 
         </form>
     )

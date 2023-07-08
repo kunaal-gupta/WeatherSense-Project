@@ -51,7 +51,7 @@ export default function WindGraph() {
   };
 
   return (
-    <div id="chart" style={{ width: '25em', height: '10em' }}>
+    <div id="chart">
       <ReactApexChart options={options} series={series} type="radialBar"/>
     </div>
   );

@@ -12,10 +12,11 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    border-radius: 1em;
+    border-radius: 2em;
     height: 80vh;
     width: 70vw;
     background-color: rgb(1, 66, 106);
+
 }
 
 
@@ -24,9 +25,27 @@
 
 .dash-left-section {
     height: 80vh;
-    width: 13vw;
+    width: 20vw;
     border-radius: 1em;
+    background-color: rgb(1, 66, 106);
 }
+
+.dash-right-section {
+
+    /* background-color: rgb(169, 222, 243); */
+    border-radius: 2em 0.5em 0.5em 2em;
+    height: 79.5vh;
+    width: 80vw;
+    font-size: 2.5vw;
+    font-weight: 600;
+    border: rgba(252, 252, 252, 0.591) solid;
+    background-image: url(../../public/6206160.jpg);
+    background-position: 50% 25%;
+    background-size: 90%;
+
+
+}
+
 
 .Time-Section {
     /* background-color: yellow; */
@@ -76,20 +95,6 @@
   
 
 
-.dash-right-section {
-
-    background-color: rgb(169, 222, 243);
-    border-radius: 1em;
-    height: 79.5vh;
-    width: 69vw;
-    font-size: 2.5vw;
-    font-weight: 600;
-    border: rgba(252, 252, 252, 0.591) solid;
-    background-image: url(../../public/6206160.jpg);
-    background-position: 60%;
-    background-size: 90%;
-
-}
 
 .dash-right-content {
     display: flex;
@@ -107,6 +112,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    /* background-color: orange; */
 }
 
 .temp-boxes {
@@ -142,7 +148,8 @@
 
 .Wind {
     margin-bottom: 2%;
-
+    width: 15em; 
+    height: 10em; 
 }
 
 .thermom-section-left {

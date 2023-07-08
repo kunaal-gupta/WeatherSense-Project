@@ -37,12 +37,6 @@ export default function Home() {
             <div id="register">
               < Register />
             </div>
-            
-            {/* <Link to="/dashboard">
-              <button className="Welcome-button">Load Dashboard</button>
-            </Link>            */}
-            {/* <div className="loader"></div> */}
-
           </div>
         </div>
       </div>
