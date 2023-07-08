@@ -10,7 +10,6 @@ app.use(express.json());
 
 app.post('/loginCredentials', async (req, res) => {
   // Handle the POST request logic here
-
   const { Username, Password } = req.body;
   const result = await LoginCred(Username, Password);
   console.log(result);
@@ -23,9 +22,9 @@ app.post('/loginCredentials', async (req, res) => {
 
 });
 
-// app.get('/', (req, res) => {
-//   res.send('Server is running on port ' + port)
-// })
+app.get('/', (req, res) => {
+  res.send('Server is running on port ' + port)
+})
 
 // app.get('/server01', (req, res) => {
 //   res.send('Server is running on port ' + port + ' Server01')

@@ -41,6 +41,21 @@
     box-shadow: 4px 8px 16px rgba(72, 183, 231, 0.591);
 }
 
+.IncorrectIdPwd{
+    padding: 0.5vh 2vh 0.5vh 2vh;
+    width: 20vw;
+    font-size: 50%;
+    text-align: center;
+
+    color: rgb(247, 247, 247);
+    font-weight: 700;
+    /* border: rgba(72, 183, 231, 0.591) solid; */
+    border-radius: 118px;
+    /* background-color: rgb(61, 154, 246); */
+    box-shadow: 4px 8px 16px rgba(72, 183, 231, 0.591);
+    display: none;
+}
+
 .Register {
     padding: 0.5vh 2vh 0.5vh 2vh;
     width: 20vw;
@@ -75,3 +90,30 @@ input:focus {
     background-color: rgb(19, 121, 237);
     border-bottom: white 5px solid;
 }
+
+
+.loader{
+    background-color: rgba(22, 157, 225, 0.247);
+    border-top:  rgb(255, 132, 0) 10px solid;
+    border-bottom: rgb(255, 132, 0) 10px solid;
+    border-left: white 10px solid;
+    border-right: rgb(99, 179, 229) 10px solid;
+    border-radius: 50%;
+
+    animation: loading 1s linear infinite;
+    height: 1em;
+    width: 1em;
+    display: none;
+  
+    
+  }
+  
+  @keyframes loading {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

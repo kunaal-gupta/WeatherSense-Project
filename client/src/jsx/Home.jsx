@@ -40,7 +40,7 @@ export default function Home() {
             {/* <Link to="/dashboard">
               <button className="Welcome-button">Load Dashboard</button>
             </Link>            */}
-            <div className="loader"></div>
+            {/* <div className="loader"></div> */}
 
           </div>
         </div>
