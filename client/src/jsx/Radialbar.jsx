@@ -1,7 +1,6 @@
 import React from "react";
 import ReactApexChart from 'react-apexcharts';
 
-
 export default function WindGraph() {
   const series = [180, 120];
   const options = {
@@ -14,45 +13,36 @@ export default function WindGraph() {
       radialBar: {
         startAngle: -130,
         endAngle: 130,
-        dataLabels: {
-          name: {
-            fontSize: '20px',
-            color: 'red',
-            offsetY: 120
-          },
-          value: {
-            offsetY: 76,
-            fontSize: '21px',
-            color: 'undefined',
-            formatter: function (val) {
-              return val + "%";
-            },
-          }
-        }
-      }
-    },
-    fill: {
-      type: 'gradient',
-      colors: ['blue', 'orange'],
 
-      gradient: {
-        shade: 'dark',
-        shadeIntensity: 0.15,
-        inverseColors: false,
-        opacityFrom: 1,
-        opacityTo: 1,
-        stops: [0, 150]
+        track: {
+          background: '#fff',
+          strokeWidth: '10%',
+        },
+        dataLabels: {
+          show: false,
+        },
       },
     },
-    stroke: {
-      dashArray: 4
+    fill: {
+      type: 'pattern',
+      colors: ['blue', 'orange'],
+      pattern: {
+        style: 'slantedLines',
+        width: 1,
+        height: 1,
+        strokeWidth: 5,
+      },
     },
-    labels: ['Chances of Rain', 'UV Index'],
+    labels: ['Chances of Rain', 'Humidity'],
   };
 
   return (
     <div id="chart">
-      <ReactApexChart options={options} series={series} type="radialBar"/>
+      <ReactApexChart options={options} series={series} type="radialBar" />
+      <div className="chart-labels">
+        <div className="chart-label chart-label-small" style={{ backgroundColor: 'orange', color: 'white', marginBottom: '1%' }}>Humidity</div>
+        <div className="chart-label chart-label-small" style={{ backgroundColor: 'blue', color: 'white' }}>Chances of Rain</div>
+      </div>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "../css/dashboard.css";
 import WindGraph from './Radialbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock } from '@fortawesome/free-solid-svg-icons';
+import { faClock, faWind } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -29,12 +29,9 @@ function Dashboard() {
 	const [Gust, setGust] = useState(6);
 	const [GustUnit, setGustUnit] = useState('mph');
 
-	// const [Wind, setWind] = useState(0);
-
-	// let Temp = 20;
-	let Wind = 0;
-	let wind_degree = 270;
-	let wind_dir = 'N';
+	const [Wind, setWind] = useState(0);
+	const [WindDeg, setWindDeg] = useState(270);
+	const [WindDir, setWindDir] = useState('N');
 
 	const currentTime = new Date();
 	const currentHour = currentTime.getHours();
@@ -137,18 +134,21 @@ function Dashboard() {
 						<div className='dash-right-content'>
 							<div className='daily-right-top-section'>
 
-								<div className='Wind'>Wind {Wind} mph {wind_degree}° {wind_dir}  </div>
+								<div className='Wind'>Wind {Wind} mph {WindDeg}° {WindDir}  </div>
 
 							</div>
 							<div className='dash-right-bottom-section'>
-
+			
 								<div className='thermom-section-left'>
 									<div className='thermom' style={{ height: Lheight + '%' }}></div>
 								</div>
+
 								<div className='WindGraph'><WindGraph /></div>
 								<div className='thermom-section-right'>
 									<div className='thermom' style={{ height: Rheight + '%' }}></div>
+
 								</div>
+
 							</div>
 
 
