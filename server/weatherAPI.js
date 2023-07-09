@@ -26,7 +26,7 @@ async function FetchAPIdata() {
     data.Pressure = response.data.current.pressure_mb;
     data.Visibility = response.data.current.vis_km;
     data.Gust = response.data.current.gust_mph;
-    data.Location = response.data.location.name + ', ' + response.data.location.country + ', ' +  response.data.location.region 
+    data.Location = response.data.location.name + ', ' + response.data.location.region + ', ' +  response.data.location.country 
     data.Longitude = response.data.location.lat;;
     data.Latitude = response.data.location.lon;;
     data.WindDeg = response.data.current.wind_degree;

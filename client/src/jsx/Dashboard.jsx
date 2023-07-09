@@ -14,6 +14,7 @@ function Dashboard() {
 		axios.get('http://localhost:5000/loadDashboard', data)
 			.then((response) => {
 				
+				setLocation(response.data.Location)
 				setCloud(response.data.Cloud)
 				setTemp(response.data.Temp)
 				setFeelsLike(response.data.FeelsLike)
@@ -35,6 +36,7 @@ function Dashboard() {
 			});
 	}, [])
 
+	const [Location, setLocation] = useState('Edmonton, Alberta, Canada')
 	const [Temp, setTemp] = useState(20);
 	const [TempUnit, setTempUnit] = useState('C');
 
@@ -139,7 +141,7 @@ function Dashboard() {
 
 								{` ${currentHour}:${currentMinute}:${currentSecond}`}
 							</div>
-							<div className='Location'>Edmonton, Alberta, Canada</div><br></br>
+							<div className='Location'>{Location}</div><br></br>
 
 							<div className='Latitude'>{`Latitiude: ${Latitude}`}</div>
 							<div className='Longitude'>{`Longitude: ${Longitude}`}</div>
