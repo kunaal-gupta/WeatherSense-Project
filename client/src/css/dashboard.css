@@ -70,14 +70,25 @@
     align-items: center;
     justify-content: center;
 }
+
+.Pressure:hover, .Visibility:hover, .Gust:hover {
+    transform: scale(105%);
+}
 .unit{
     background-color: rgb(218, 42, 42);
+    color: white;
     padding: 0.5em 0.5em 0.5em 0.5em;
     margin-right: 5%;
     margin-left: 2%;
-    width: 18%;
+    width: 20%;
     text-align: center;
+    font-weight: bold;
     cursor: pointer;
+
+}
+
+.unit:hover{
+    border: white 4px solid;
 
 }
 .Time-Section {

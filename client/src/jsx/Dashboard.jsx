@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import "../css/dashboard.css";
 import WindGraph from './Radialbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,21 +8,28 @@ import { faClock } from '@fortawesome/free-solid-svg-icons';
 
 function Dashboard() {
 	const [Temp, setTemp] = useState(20);
-	const [TempUnit, setTempUnit] = useState('C'); 
+	const [TempUnit, setTempUnit] = useState('C');
 
 	const [FeelsLike, setFeelsLike] = useState(20);
-	const [FeelsLikeUnit, setFeelsLikeUnit] = useState('C'); 
+	const [FeelsLikeUnit, setFeelsLikeUnit] = useState('C');
 
 
 	let Lheight = 70;
 	let Rheight = 40;
 
-	let Longitude = -113.5;
-	let Latitude = 53.55;
+	const [Longitude, setLongitude] = useState(-113.5);
+	const [Latitude, setLatitude] = useState(53.55);
 
-	let Pressure = 5;
-	let Visibility = 4;
-	let Gust = 6;
+	const [Pressure, setPressure] = useState(5);
+	const [PressureUnit, setPressureUnit] = useState('mb');
+
+	const [Visibility, setVisibility] = useState(4);
+	const [VisibilityUnit, setVisibilityUnit] = useState('km');
+
+	const [Gust, setGust] = useState(6);
+	const [GustUnit, setGustUnit] = useState('mph');
+
+	// const [Wind, setWind] = useState(0);
 
 	// let Temp = 20;
 	let Wind = 0;
@@ -36,41 +43,32 @@ function Dashboard() {
 
 
 	function PressureChange() {
-		const unitDiv = document.getElementById('pUnit');
-		const valDiv = document.getElementById('pressVal');
-
-		if (unitDiv.textContent === 'mb') {
-			unitDiv.textContent = 'in';
-			valDiv.textContent = Pressure * 2;
+		if (PressureUnit === 'mb') {
+			setPressureUnit('in');
+			setPressure((Pressure * 0.03937).toFixed(1));
 		} else {
-			unitDiv.textContent = 'mb';
-			valDiv.textContent = Pressure;
+			setPressureUnit('mb');
+			setPressure((Pressure / 0.03937).toFixed(1));
 		}
 	}
 
 	function VisibilityChange() {
-		const unitDiv = document.getElementById('visUnit');
-		const valDiv = document.getElementById('visVal');
-
-		if (unitDiv.textContent === 'km') {
-			unitDiv.textContent = 'mile';
-			valDiv.textContent = Visibility * 2;
+		if (VisibilityUnit === 'km') {
+			setVisibilityUnit('mile');
+			setVisibility((Visibility * 0.62137119).toFixed(1));
 		} else {
-			unitDiv.textContent = 'km';
-			valDiv.textContent = Visibility;
+			setVisibilityUnit('km');
+			setVisibility((Visibility / 0.62137119).toFixed(1));
 		}
 	}
 
 	function GustChange() {
-		const unitDiv = document.getElementById('gustUnit');
-		const valDiv = document.getElementById('gustVal');
-
-		if (unitDiv.textContent === 'mph') {
-			unitDiv.textContent = 'kph';
-			valDiv.textContent = Gust * 2;
+		if (GustUnit === 'mph') {
+			setGustUnit('kph');
+			setGust((Gust * 1.609).toFixed(1));
 		} else {
-			unitDiv.textContent = 'mph';
-			valDiv.textContent = Gust;
+			setGustUnit('mph');
+			setGust((Gust / 1.609).toFixed(1));
 		}
 	}
 
@@ -78,13 +76,13 @@ function Dashboard() {
 		if (TempUnit === 'C') {
 			setTempUnit('F');
 			setFeelsLikeUnit('F')
-			setTemp((Temp * 9/5) + 32);
-			setFeelsLike((FeelsLike * 9/5) + 32)
+			setTemp((Temp * 9 / 5) + 32);
+			setFeelsLike((FeelsLike * 9 / 5) + 32)
 		} else {
 			setTempUnit('C');
 			setFeelsLikeUnit('F')
-			setTemp((Temp -32)*5/9);
-			setFeelsLike((FeelsLike -32)*5/9)
+			setTemp((Temp - 32) * 5 / 9);
+			setFeelsLike((FeelsLike - 32) * 5 / 9)
 		}
 	}
 
@@ -116,19 +114,19 @@ function Dashboard() {
 						<div className='Other-Weather-Section'>
 							<div className='Pressure'>
 								<div>Pressure </div>
-								<div className='unit' id='pUnit' onClick={PressureChange}> in  </div>
+								<div className='unit' id='pUnit' onClick={PressureChange}> {PressureUnit}  </div>
 								<div id='pressVal'>{Pressure} </div>
 
 							</div>
 							<div className='Visibility'>
 								<div>Visibility .</div>
-								<div className='unit' id='visUnit' onClick={VisibilityChange}> km  </div>
+								<div className='unit' id='visUnit' onClick={VisibilityChange}> {VisibilityUnit}  </div>
 								<div id='visVal'>{Visibility}  </div>
 							</div>
 
 							<div className='Gust'>
 								<div>WindGust</div>
-								<div className='unit' id='gustUnit' onClick={GustChange}> km  </div>
+								<div className='unit' id='gustUnit' onClick={GustChange}> {GustUnit}  </div>
 								<div id='gustVal'>{Gust}  </div>
 							</div>
 
