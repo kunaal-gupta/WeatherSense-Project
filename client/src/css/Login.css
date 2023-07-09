@@ -1,4 +1,4 @@
-.Username {
+.LoginUsername {
     height: 5vh;
     width: 20vw;
     margin-top: 4vh;
@@ -13,7 +13,7 @@
 
 }
 
-.Password {
+.LoginPassword {
     height: 5vh;
     width: 20vw;
     padding: 2%;
@@ -44,14 +44,14 @@
 .IncorrectIdPwd{
     padding: 0.5vh 2vh 0.5vh 2vh;
     width: 20vw;
+    height: 3vh;
     font-size: 50%;
     text-align: center;
+    background-color: rgb(255, 2, 2);
 
     color: rgb(247, 247, 247);
     font-weight: 700;
-    /* border: rgba(72, 183, 231, 0.591) solid; */
-    border-radius: 118px;
-    /* background-color: rgb(61, 154, 246); */
+    border-radius: 116px;
     box-shadow: 4px 8px 16px rgba(72, 183, 231, 0.591);
     display: none;
 }
@@ -65,9 +65,7 @@
 
     color: white;
     font-weight: 100;
-    /* border: rgba(72, 183, 231, 0.591) solid; */
     border-radius: 118px;
-    /* background-color: rgb(61, 154, 246); */
     box-shadow: 4px 8px 16px rgba(72, 183, 231, 0.591);
 }
 
@@ -78,7 +76,7 @@ input::placeholder {
 }
 
 
-.form {
+.Loginform {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -86,24 +84,24 @@ input::placeholder {
 
 }
 
-/* input:focus {
-    background-color: rgb(19, 121, 237);
+input:focus {
+    background-color: rgba(13, 119, 165, 0.792);
     border-bottom: white 5px solid;
-} */
+}
 
 
-.loader{
+.Loginloader{
     background-color: rgba(22, 157, 225, 0.247);
     border-top:  rgb(255, 132, 0) 0.2em solid;
     border-bottom: rgb(255, 132, 0) 0.2em solid;
     border-left: white 0.2em solid;
-    border-right: rgb(99, 179, 229) 0.2em solid;
+    border-right: rgb(255, 255, 255) 0.2em solid;
     border-radius: 50%;
 
-    animation: loading 1s linear infinite;
+    animation: loading 0.5s linear infinite;
     height: 1.1em;
     width: 1.1em;
-    /* display: none; */
+    display: none;
   
     
   }
@@ -112,8 +110,12 @@ input::placeholder {
     0% {
       transform: rotate(0deg);
     }
+    50% {
+        transform: rotate(180deg);
+      }
     100% {
       transform: rotate(360deg);
+
     }
   }
   

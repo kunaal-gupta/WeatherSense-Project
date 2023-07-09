@@ -1,12 +1,15 @@
-import React, { useState } from "react";
-import axios from 'axios';
-import '../css/Loginform.css'
+import { WiDaySnowWind } from "react-icons/wi";
 import { Link, withRouter } from "react-router-dom";
+import axios from 'axios';
+import React, { useState } from 'react';
 
-function Login({ history }) {
+import "../css/Home.css";
+import "../css/Login.css";
+
+
+function LoginData({ history }) {
   const [Username, setUsername] = useState('')
   const [Password, setPassword] = useState('')
-  // console.log(Username)
 
   function SendLoginData(event) {
     document.getElementById('loader').style.display = 'block';
@@ -21,7 +24,7 @@ function Login({ history }) {
     const data = { 'Username': Username, 'Password': Password };
     axios.post('http://localhost:5000/loginCredentials', data)
       .then(response => {
-        
+
 
         console.log(response.data);
         if (response.data === 'successful') {
@@ -42,19 +45,41 @@ function Login({ history }) {
 
 
   return (
-    <form className="form" onSubmit={SendLoginData}>
-      <input className='Username' type="text" placeholder="Username" required onChange={(e) => setUsername(e.target.value)} />
-      <input className='Password' type="password" placeholder="Password" required onChange={(b) => setPassword(b.target.value)} />
+    <form className="Loginform" onSubmit={SendLoginData}>
+      <input className='LoginUsername' type="text" placeholder="Username" required onChange={(e) => setUsername(e.target.value)} />
+      <input className='LoginPassword' type="password" placeholder="Password" required onChange={(b) => setPassword(b.target.value)} />
       <div className="IncorrectIdPwd" id='IncorrectIdPwd'>Incorrect Username or password</div>
       <input className='Submit' id='Submit' type='submit' />
       <Link to="/register">
         <div className="Register" id='Register'>Not a member? Sign In</div>
       </Link>
-      <div className="loader" id='loader'></div>
+      <div className="Loginloader" id='loader'></div>
     </form>
   );
 }
 
-export default withRouter(Login);
+const LoginWithRouter = withRouter(LoginData);
 
 
+export default function LoadLoginPage() {
+
+  return (
+
+    <>
+      <div className="background">
+        <div className="Welcome-section">
+          <div className="welcome-empty-section">
+            < WiDaySnowWind className="WeatherIcon" />
+
+          </div>
+          <div className="Welcome-heading">
+            <div> Welcome to Weather<span style={{ color: 'White' }}>Sense</span></div>
+            <div id="login">
+              <LoginWithRouter />
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}

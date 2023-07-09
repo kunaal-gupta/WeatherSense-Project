@@ -1,11 +1,12 @@
 import React from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
-import Home from "./Home.jsx";
+import LoadLoginPage from "./Login.jsx";
 import Contact from "./Contact.jsx";
 import About from "./About.jsx";
 import Dashboard from "./Dashboard.jsx";
 import LoadWelcome from './Welcome.jsx'
+import RegisterPage from './Register.jsx'
 
 export default function App() {
   return (
@@ -22,8 +23,8 @@ export default function App() {
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/" component={LoadWelcome} />
 
-        <Route exact path="/login" component={Home} />
-        <Route path="/register" component={Home} />
+        <Route exact path="/login" component={LoadLoginPage} />
+        <Route path="/register" component={RegisterPage} />
 
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />

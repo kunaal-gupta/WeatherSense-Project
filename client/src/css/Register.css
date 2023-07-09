@@ -63,7 +63,7 @@
 }
 
 
-
+/* 
 input::placeholder {
     color: rgb(255, 255, 255);
     font-weight: bold;
@@ -116,4 +116,4 @@ input:focus {
     border-radius: 118px;
     box-shadow: 4px 8px 16px rgba(72, 183, 231, 0.591);
     display: none;
-}
+} */
