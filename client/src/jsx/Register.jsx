@@ -14,6 +14,11 @@ function RegisterData({ history }) {
   const [City, setCity] = useState('')
 
   function SendRegisterData(event) {
+    document.getElementById('Registerloader').style.display = 'block';
+    document.getElementById('RegisterButton').style.display = 'none';
+
+
+
 
       event.preventDefault(); // Prevent the default form submission behavior
 
@@ -23,11 +28,13 @@ function RegisterData({ history }) {
 
               console.log(response.data);
               if (response.data === 'created') {
-                  console.log('c')
                   history.push("/dashboard"); // Replace "/a" with the desired redirect URL
               } else if (response.data === 'exists') {
                   document.getElementById('ProfileExists').style.display = 'block';
-                  console.log('e')
+                  document.getElementById('Registerloader').style.display = 'none';
+                  document.getElementById('RegisterButton').style.display = 'block';
+
+
 
               }
           })
@@ -42,9 +49,12 @@ function RegisterData({ history }) {
           <input className='RegEmail' type="email" placeholder="Email" required onChange={(f) => setEmail(f.target.value)} />
           <input className='RegPassword' type="password" placeholder="Password" required onChange={(f) => setPassword(f.target.value)} />
           <input className='RegCity' type="text" placeholder="City" required onChange={(g) => setCity(g.target.value)} />
+          <Link to="/login">
 
-          <input className='RegisterButton' type='submit' value={'Submit & Register'} />
-          <div className="ProfileExists"> Profile already exists</div>
+          <div className="ProfileExists" id="ProfileExists"> Profile already exists. Log in</div>
+          </Link>
+
+          <input className='RegisterButton' id='RegisterButton' type='submit' value={'Submit & Register'} />
 
           <div className="Registerloader" id='Registerloader'></div>
 

@@ -114,16 +114,33 @@ input:focus {
 
     }
   }
-  
-
-.ProfileExists {
+  /* .IncorrectIdPwd{
     padding: 0.5vh 2vh 0.5vh 2vh;
     width: 20vw;
+    height: 3vh;
     font-size: 50%;
     text-align: center;
+    background-color: rgb(255, 2, 2);
+
     color: rgb(247, 247, 247);
     font-weight: 700;
-    border-radius: 118px;
+    border-radius: 116px;
     box-shadow: 4px 8px 16px rgba(72, 183, 231, 0.591);
     display: none;
+} */
+
+
+.ProfileExists {
+  padding: 0.5vh 2vh 0.5vh 2vh;
+  width: 20vw;
+  height: 3vh;
+  font-size: 50%;
+  text-align: center;
+  background-color: rgb(255, 2, 2);
+
+  color: rgb(247, 247, 247);
+  font-weight: 700;
+  border-radius: 116px;
+  box-shadow: 4px 8px 16px rgba(72, 183, 231, 0.591);
+  display: none;
 }

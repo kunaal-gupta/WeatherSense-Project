@@ -39,15 +39,14 @@ function LoginData({ history }) {
       })
       .catch(error => {
         console.error('hi', error);
-        window.alert('fffffffffff')
       });
   }
 
 
   return (
     <form className="Loginform" onSubmit={SendLoginData}>
-      <input className='LoginUsername' type="text" placeholder="Username"  onChange={(e) => setUsername(e.target.value)} />
-      <input className='LoginPassword' type="password" placeholder="Password"  onChange={(b) => setPassword(b.target.value)} />
+      <input className='LoginUsername' type="text" placeholder="Username" required onChange={(e) => setUsername(e.target.value)} />
+      <input className='LoginPassword' type="password" placeholder="Password"  required onChange={(b) => setPassword(b.target.value)} />
       <div className="IncorrectIdPwd" id='IncorrectIdPwd'>Incorrect Username or password</div>
       <input className='Submit' id='Submit' type='submit' />
       <Link to="/register">
