@@ -14,9 +14,19 @@ function Dashboard() {
 		axios.get('http://localhost:5000/loadDashboard', data)
 			.then((response) => {
 				console.log('data recieved');
-				console.log(response)
+				console.log('hi', response)
 
-  
+				setTemp(response.data.Temp)
+				setFeelsLike(response.data.FeelsLike)
+				setGust(response.data.Gust)
+				setLatitude(response.data.Latitude)
+				setLongitude(response.data.Longitude)
+				setPressure(response.data.Pressure)
+				setVisibility(response.data.Visibility)
+				setGust(response.data.Gust)
+				setWind(response.data.Wind)
+				setWindDeg(response.data.WindDeg)
+				setWindDir(response.data.WindDir)
 
 			})
 			.catch(error => {
@@ -90,13 +100,13 @@ function Dashboard() {
 		if (TempUnit === 'C') {
 			setTempUnit('F');
 			setFeelsLikeUnit('F')
-			setTemp((Temp * 9 / 5) + 32);
-			setFeelsLike((FeelsLike * 9 / 5) + 32)
+			setTemp(((Temp * 9 / 5) + 32).toFixed(1));
+			setFeelsLike(((FeelsLike * 9 / 5) + 32).toFixed(1))
 		} else {
 			setTempUnit('C');
 			setFeelsLikeUnit('F')
-			setTemp((Temp - 32) * 5 / 9);
-			setFeelsLike((FeelsLike - 32) * 5 / 9)
+			setTemp(((Temp - 32) * 5 / 9).toFixed(1));
+			setFeelsLike(((FeelsLike - 32) * 5 / 9).toFixed(1))
 		}
 	}
 
@@ -151,7 +161,7 @@ function Dashboard() {
 						<div className='dash-right-content'>
 							<div className='daily-right-top-section'>
 
-								<div className='Wind'>Wind {Wind} mph {WindDeg}° {WindDir}  </div>
+								<div className='Wind'>Wind: {Wind} mph @ {WindDeg}°{WindDir}  </div>
 								<div className='VisibNuvIndex-name'>
 									<div>Visibility</div>
 									<div> UV Index</div>

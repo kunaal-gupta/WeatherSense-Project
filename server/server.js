@@ -4,7 +4,7 @@ const port = 5000;
 const cors = require('cors');
 const { LoginCred } = require('./login');
 const { RegisterCred } = require('./register');
-const { FetchAPIdata } = require('./crud')
+const { FetchAPIdata } = require('./weatherAPI')
 
 app.use(cors());
 app.use(express.json());
