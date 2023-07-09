@@ -62,11 +62,12 @@ animation: border-icon 0.5s linear infinite;
 
 }
 
-.Welcome-heading {
+.Welcome-heading{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* background-color: orange; */
   background-color: rgb(169, 222, 243);
   border-radius: 60px 18px 18px 60px;
   height: 79.5vh;
@@ -77,6 +78,14 @@ animation: border-icon 0.5s linear infinite;
   background-image: url(../../public/8140.jpg);
   background-position: 10%;
   background-size: 100%;
+
+}
+
+.heading{
+  background-color: orange;
+  padding: 1vw ;
+  border-radius: 10px;
+  text-shadow: 2px 2px rgb(0, 98, 255);
 
 }
 

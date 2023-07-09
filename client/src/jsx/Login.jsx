@@ -73,7 +73,7 @@ export default function LoadLoginPage() {
 
           </div>
           <div className="Welcome-heading">
-            <div> Welcome to Weather<span style={{ color: 'White' }}>Sense</span></div>
+            <div className="heading"> Welcome to Weather<span style={{ color: 'White' }}>Sense</span></div>
             <div id="login">
               <LoginWithRouter />
             </div>
