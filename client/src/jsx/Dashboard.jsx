@@ -13,7 +13,8 @@ function Dashboard() {
 		const data = 'Send Temperature Data';
 		axios.get('http://localhost:5000/loadDashboard', data)
 			.then((response) => {
-
+				
+				setCloud(response.data.Cloud)
 				setTemp(response.data.Temp)
 				setFeelsLike(response.data.FeelsLike)
 				setGust(response.data.Gust)
@@ -36,6 +37,8 @@ function Dashboard() {
 
 	const [Temp, setTemp] = useState(20);
 	const [TempUnit, setTempUnit] = useState('C');
+
+	const [Cloud, setCloud] = useState(0);
 
 	const [Time, setTime] = useState(20);
 
@@ -99,7 +102,7 @@ function Dashboard() {
 
 
 	function WindChange() {
-		if  (WindUnit === 'mph') {
+		if (WindUnit === 'mph') {
 			setWindUnit('kph');
 			setWind((Wind * 1.609).toFixed(1));
 		} else {
@@ -176,20 +179,20 @@ function Dashboard() {
 
 								<div className='Wind' onClick={WindChange}>Wind: {Wind} {WindUnit} @ {WindDeg}°{WindDir}  </div>
 								<div className='VisibNuvIndex-name'>
-									<div>Gust Speed</div>
-									<div> UV Index</div>
+									<div className='Cloud'>Chances of Cloud</div>
+									<div className='UV'> UV Index <br />(1 - 11)</div>
 								</div>
 
 							</div>
 							<div className='dash-right-bottom-section'>
 
 								<div className='thermom-section-left'>
-									<div className='thermom' style={{ height: `${Gust}%` }}></div>
+									<div className='thermom' style={{ height: `${Cloud}%` }}></div>
 								</div>
 
 								<div className='WindGraph'><WindGraph /></div>
 								<div className='thermom-section-right'>
-									<div className='thermom' style={{ height: `${UVIndex}%` }}></div>
+								<div className='thermom' style={{ height: `${UVIndex/0.11}%` }}></div>
 
 								</div>
 

@@ -201,7 +201,14 @@
     align-items: flex-start;
     font-size: 1.5vw;
     color: white;
-    gap: 60%;
+    gap:60%;
+    /* background-color: red; */
+    margin-top: 2%;
+}
+
+.Cloud, .UV {
+    width: 20vw;
+    padding: 1%;
 }
 
 .Wind {
