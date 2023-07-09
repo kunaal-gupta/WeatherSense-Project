@@ -5,7 +5,6 @@ import Home from "./Home.jsx";
 import Contact from "./Contact.jsx";
 import About from "./About.jsx";
 import Dashboard from "./Dashboard.jsx";
-import WindGraph from "./Radialbar.jsx";
 import LoadWelcome from './Welcome.jsx'
 
 export default function App() {
@@ -17,7 +16,6 @@ export default function App() {
         <Link to="/dashboard">Dashboard</Link>
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
-        <Link to="/radialgraph">RadialGraph</Link>
 
       </nav>
 
@@ -29,7 +27,6 @@ export default function App() {
 
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
-        <Route path="/radialgraph" component={WindGraph} />;
 
     </BrowserRouter>
   );

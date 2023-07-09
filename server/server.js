@@ -4,6 +4,7 @@ const port = 5000;
 const cors = require('cors');
 const { LoginCred } = require('./login');
 const { RegisterCred } = require('./register');
+const { FetchAPIdata } = require('./crud')
 
 app.use(cors());
 app.use(express.json());
@@ -28,7 +29,7 @@ app.post('/registerCredentials', async (req, res) => {
 
   if (result === 1) {
     res.send('exists')
-  } else if(result === 2) {
+  } else if (result === 2) {
     res.send('created')
 
   }
@@ -37,6 +38,13 @@ app.post('/registerCredentials', async (req, res) => {
   }
 
 });
+
+app.get('/loadDashboard', async (req, res) => {
+  const WeatherData = await FetchAPIdata();
+  console.log(WeatherData)
+  res.send(WeatherData);
+
+})
 
 app.get('/', (req, res) => {
   res.send('Server is running on port ' + port)

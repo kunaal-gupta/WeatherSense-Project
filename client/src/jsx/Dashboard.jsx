@@ -1,12 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import "../css/dashboard.css";
+import axios from 'axios';
+
 import WindGraph from './Radialbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock, faWind } from '@fortawesome/free-solid-svg-icons';
+import { faClock } from '@fortawesome/free-solid-svg-icons';
 
 
 
 function Dashboard() {
+	useEffect(() => {
+		const data = 'Send Temperature Data';
+		axios.get('http://localhost:5000/loadDashboard', data)
+			.then((response) => {
+				console.log('data recieved');
+				console.log(response)
+
+  
+
+			})
+			.catch(error => {
+				console.error('hi', error);
+			});
+	}, [])
+
 	const [Temp, setTemp] = useState(20);
 	const [TempUnit, setTempUnit] = useState('C');
 
@@ -142,7 +159,7 @@ function Dashboard() {
 
 							</div>
 							<div className='dash-right-bottom-section'>
-			
+
 								<div className='thermom-section-left'>
 									<div className='thermom' style={{ height: Lheight + '%' }}></div>
 								</div>
