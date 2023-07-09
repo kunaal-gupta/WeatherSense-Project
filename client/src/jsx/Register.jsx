@@ -1,27 +1,25 @@
 import { WiDaySnowWind } from "react-icons/wi";
 import axios from 'axios';
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+import React, {useState } from 'react';
+
 import "../css/Home.css"
-import React, { useEffect, useState } from 'react';
+import "../css/Register.css";
 
 
-
-
-
-function Register({ history }) {
+function RegisterData({ history }) {
   const [Name, setName] = useState('')
   const [Email, setEmail] = useState('')
   const [Password, setPassword] = useState('')
   const [City, setCity] = useState('')
 
-  function SendLoginData(event) {
+  function SendRegisterData(event) {
 
       event.preventDefault(); // Prevent the default form submission behavior
 
       const data = { 'Username': Email, 'Password': Password, 'Name': Name, 'City': City };
       axios.post('http://localhost:5000/registerCredentials', data)
           .then(response => {
-
 
               console.log(response.data);
               if (response.data == 'created') {
@@ -39,23 +37,25 @@ function Register({ history }) {
   }
   return (
 
-      <form className="form" onSubmit={SendLoginData} >
-          <input className='Name' type="text" placeholder="Name" required onChange={(e) => setName(e.target.value)} />
-          <input className='Email' type="email" placeholder="Email" required onChange={(f) => setEmail(f.target.value)} />
-          <input className='Password' type="password" placeholder="Password" required onChange={(f) => setPassword(f.target.value)} />
-          <input className='City' type="text" placeholder="City" required onChange={(g) => setCity(g.target.value)} />
+      <form className="Registerform" onSubmit={SendRegisterData} >
+          <input className='RegName' type="text" placeholder="Name" required onChange={(e) => setName(e.target.value)} />
+          <input className='RegEmail' type="email" placeholder="Email" required onChange={(f) => setEmail(f.target.value)} />
+          <input className='RegPassword' type="password" placeholder="Password" required onChange={(f) => setPassword(f.target.value)} />
+          <input className='RegCity' type="text" placeholder="City" required onChange={(g) => setCity(g.target.value)} />
 
           <input className='RegisterButton' type='submit' value={'Submit & Register'} />
           <div className="ProfileExists"> Profile already exists</div>
 
-          <div className="loader" id='loader'></div>
+          <div className="Registerloader" id='Registerloader'></div>
 
       </form>
   )
 }
 
+const RegisterWithRouter = withRouter(RegisterData);
 
-export default function RegisterPage() {
+
+export default function LoadRegisterPage() {
 
   return (
 
@@ -70,7 +70,7 @@ export default function RegisterPage() {
             <div> Welcome to Weather<span style={{ color: 'White' }}>Sense</span></div>
     
             <div id="register">
-              < Register />
+              < RegisterWithRouter />
             </div>
           </div>
         </div>

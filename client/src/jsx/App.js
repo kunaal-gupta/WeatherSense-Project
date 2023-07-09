@@ -6,13 +6,13 @@ import Contact from "./Contact.jsx";
 import About from "./About.jsx";
 import Dashboard from "./Dashboard.jsx";
 import LoadWelcome from './Welcome.jsx'
-import RegisterPage from './Register.jsx'
+import LoadRegisterPage from './Register.jsx'
 
 export default function App() {
   return (
     <BrowserRouter>
       <nav>
-        <Link to="/login">Home</Link>
+        <Link to="/">Home</Link>
 
         <Link to="/dashboard">Dashboard</Link>
         <Link to="/about">About</Link>
@@ -24,7 +24,7 @@ export default function App() {
         <Route exact path="/" component={LoadWelcome} />
 
         <Route exact path="/login" component={LoadLoginPage} />
-        <Route path="/register" component={RegisterPage} />
+        <Route path="/register" component={LoadRegisterPage} />
 
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />

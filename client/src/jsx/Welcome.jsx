@@ -1,9 +1,8 @@
 import { WiDaySnowWind } from "react-icons/wi";
 import { Link } from "react-router-dom";
-import LoadLoginPage from "./Login";
-import Register from "./RegisterForm.jsx";
+import React from 'react';
 import "../css/Home.css"
-import React, { useEffect } from 'react';
+
 
 
 

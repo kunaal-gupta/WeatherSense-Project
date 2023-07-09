@@ -30,7 +30,7 @@ function LoginData({ history }) {
         if (response.data === 'successful') {
           history.push("/dashboard"); // Replace "/a" with the desired redirect URL
         } else {
-          document.getElementById('loader').style.display = 'none';
+          document.getElementById('Loginloader').style.display = 'none';
           document.getElementById('Submit').style.display = 'block';
           document.getElementById('Register').style.display = 'block';
 
@@ -53,7 +53,7 @@ function LoginData({ history }) {
       <Link to="/register">
         <div className="Register" id='Register'>Not a member? Sign In</div>
       </Link>
-      <div className="Loginloader" id='loader'></div>
+      <div className="Loginloader" id='Loginloader'></div>
     </form>
   );
 }

@@ -1,4 +1,4 @@
-.Name {
+.RegName {
     height: 4.5vh;
     width: 18vw;
     margin-top: 4vh;
@@ -11,20 +11,20 @@
     border: white solid;
 } 
 
-.Password {
+.RegPassword {
     height: 4.5vh;
     width: 18vw;
     margin-top: 4vh;
     font-size: 55%;
     padding: 2%;
     background-color: rgba(22, 157, 225, 0.247);
-    color: rgb(240, 25, 25);
+    color: rgb(255, 255, 255);
     border-radius: 10px;
     font-weight: bold;
     border: white solid;
 }
 
-.Email {
+.RegEmail {
     height: 4.5vh;
     width: 18vw;
     padding: 2%;
@@ -36,7 +36,7 @@
     border: white solid;
 }
 
-.City {
+.RegCity {
     height: 4.5vh;
     width: 18vw;
     padding: 2%;
@@ -63,48 +63,58 @@
 }
 
 
-/* 
+
 input::placeholder {
     color: rgb(255, 255, 255);
     font-weight: bold;
+
 }
 
 
-.form {
+.Registerform {
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
     gap: 1vh;
 
 }
 
 input:focus {
-    background-color: rgb(19, 121, 237);
+    background-color: rgba(13, 119, 165, 0.792);
     border-bottom: white 5px solid;
 }
 
-.loader {
+
+.Registerloader{
     background-color: rgba(22, 157, 225, 0.247);
-    border-top: rgb(255, 132, 0) 0.2em solid;
+    border-top:  rgb(255, 132, 0) 0.2em solid;
     border-bottom: rgb(255, 132, 0) 0.2em solid;
     border-left: white 0.2em solid;
-    border-right: rgb(99, 179, 229) 0.2em solid;
+    border-right: rgb(255, 255, 255) 0.2em solid;
     border-radius: 50%;
-    animation: loading 1s linear infinite;
-    height: 2.1em;
-    width: 2.1em;
-}
 
-@keyframes loading {
+    animation: loading 0.5s linear infinite;
+    height: 1.1em;
+    width: 1.1em;
+    display: none;
+  
+    
+  }
+  
+  @keyframes loading {
     0% {
-        transform: rotate(0deg);
+      transform: rotate(0deg);
     }
-
+    50% {
+        transform: rotate(180deg);
+      }
     100% {
-        transform: rotate(360deg);
-    }
-}
+      transform: rotate(360deg);
 
+    }
+  }
+  
 
 .ProfileExists {
     padding: 0.5vh 2vh 0.5vh 2vh;
@@ -116,4 +126,4 @@ input:focus {
     border-radius: 118px;
     box-shadow: 4px 8px 16px rgba(72, 183, 231, 0.591);
     display: none;
-} */
+}
