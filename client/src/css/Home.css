@@ -82,10 +82,11 @@ animation: border-icon 0.5s linear infinite;
 }
 
 .heading{
-  background-color: orange;
+  background-color: rgba(255, 166, 0, 0.658);
   padding: 1vw ;
   border-radius: 10px;
-  text-shadow: 2px 2px rgb(0, 98, 255);
+  color: white;
+  text-shadow: 3px 2px rgba(0, 98, 255, 0.532);
 
 }
 
