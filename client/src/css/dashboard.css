@@ -201,7 +201,7 @@
     align-items: flex-start;
     font-size: 1.5vw;
     color: white;
-    gap: 70%;
+    gap: 60%;
 }
 
 .Wind {
@@ -264,7 +264,7 @@
     border-radius: 1em;
     display: flex;
     align-items: flex-end;
-    background-color: orange;
+    /* background-color: orange; */
     /* flex-direction: column; */
 }
 
@@ -281,8 +281,8 @@
 }
 
 .thermom {
-    background-color: rgb(35, 202, 149);
-    width: 1vw;
+    background-color: rgb(255, 255, 255);
+    width: 2vw;
 }
 
 .temp-boxes:hover {

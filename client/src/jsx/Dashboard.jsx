@@ -13,8 +13,6 @@ function Dashboard() {
 		const data = 'Send Temperature Data';
 		axios.get('http://localhost:5000/loadDashboard', data)
 			.then((response) => {
-				console.log('data recieved');
-				console.log('hi', response)
 
 				setTemp(response.data.Temp)
 				setFeelsLike(response.data.FeelsLike)
@@ -27,6 +25,7 @@ function Dashboard() {
 				setWind(response.data.Wind)
 				setWindDeg(response.data.WindDeg)
 				setWindDir(response.data.WindDir)
+				setUVIndex(response.data.UV)
 
 			})
 			.catch(error => {
@@ -40,9 +39,8 @@ function Dashboard() {
 	const [FeelsLike, setFeelsLike] = useState(20);
 	const [FeelsLikeUnit, setFeelsLikeUnit] = useState('C');
 
-
-	let Lheight = 70;
-	let Rheight = 40;
+	const [Visibility, setVisibility] = useState(70)
+	const [UVIndex, setUVIndex] = useState(40);
 
 	const [Longitude, setLongitude] = useState(-113.5);
 	const [Latitude, setLatitude] = useState(53.55);
@@ -50,7 +48,6 @@ function Dashboard() {
 	const [Pressure, setPressure] = useState(5);
 	const [PressureUnit, setPressureUnit] = useState('mb');
 
-	const [Visibility, setVisibility] = useState(4);
 	const [VisibilityUnit, setVisibilityUnit] = useState('km');
 
 	const [Gust, setGust] = useState(6);
@@ -131,7 +128,7 @@ function Dashboard() {
 								<div className='tempVal'>{`${Temp}°`} </div>
 								<div className='tempUnit'> {TempUnit}</div>
 							</div>
-							<div className='feels-like'>Feels like {FeelsLike}°C</div>
+							<div className='feels-like'>{`Feels like ${FeelsLike}°${FeelsLikeUnit}`}</div>
 
 
 						</div>
@@ -143,7 +140,7 @@ function Dashboard() {
 
 							</div>
 							<div className='Visibility'>
-								<div>Visibility .</div>
+								<div>Visibility</div>
 								<div className='unit' id='visUnit' onClick={VisibilityChange}> {VisibilityUnit}  </div>
 								<div id='visVal'>{Visibility}  </div>
 							</div>
@@ -163,7 +160,7 @@ function Dashboard() {
 
 								<div className='Wind'>Wind: {Wind} mph @ {WindDeg}°{WindDir}  </div>
 								<div className='VisibNuvIndex-name'>
-									<div>Visibility</div>
+									<div>Gust Speed</div>
 									<div> UV Index</div>
 								</div>
 
@@ -171,12 +168,12 @@ function Dashboard() {
 							<div className='dash-right-bottom-section'>
 
 								<div className='thermom-section-left'>
-									<div className='thermom' style={{ height: Lheight + '%' }}></div>
+									<div className='thermom' style={{ height: `${Gust}%` }}></div>
 								</div>
 
 								<div className='WindGraph'><WindGraph /></div>
 								<div className='thermom-section-right'>
-									<div className='thermom' style={{ height: Rheight + '%' }}></div>
+									<div className='thermom' style={{ height: `${UVIndex}%` }}></div>
 
 								</div>
 

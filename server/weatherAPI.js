@@ -29,9 +29,12 @@ async function FetchAPIdata() {
     data.Latitude = response.data.location.lon;;
     data.WindDeg = response.data.current.wind_degree;
     data.WindDir = response.data.current.wind_dir;
-    data.Precipitation = response.data.current.precip_in;;
+    data.Precipitation = response.data.current.precip_in;
     data.Localtime = response.data.location.localtime;
-    ;
+    data.UV = response.data.current.uv;
+
+
+
 
     return data
   } catch (error) {
