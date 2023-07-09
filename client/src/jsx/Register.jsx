@@ -22,10 +22,10 @@ function RegisterData({ history }) {
           .then(response => {
 
               console.log(response.data);
-              if (response.data == 'created') {
+              if (response.data === 'created') {
                   console.log('c')
                   history.push("/dashboard"); // Replace "/a" with the desired redirect URL
-              } else if (response.data == 'exists') {
+              } else if (response.data === 'exists') {
                   document.getElementById('ProfileExists').style.display = 'block';
                   console.log('e')
 
