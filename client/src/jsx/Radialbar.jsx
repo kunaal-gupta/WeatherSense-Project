@@ -30,7 +30,7 @@ export default function WindGraph() {
         style: 'slantedLines',
         width: 1,
         height: 1,
-        strokeWidth: 5,
+        strokeWidth: 1,
       },
     },
     labels: ['Chances of Rain', 'Humidity'],

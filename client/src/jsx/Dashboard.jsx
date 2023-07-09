@@ -135,6 +135,10 @@ function Dashboard() {
 							<div className='daily-right-top-section'>
 
 								<div className='Wind'>Wind {Wind} mph {WindDeg}° {WindDir}  </div>
+								<div className='VisibNuvIndex-name'>
+									<div>Visibility</div>
+									<div> UV Index</div>
+								</div>
 
 							</div>
 							<div className='dash-right-bottom-section'>

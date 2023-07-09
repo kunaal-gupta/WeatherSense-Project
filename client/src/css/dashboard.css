@@ -188,9 +188,20 @@
     height: 80vh;
     width: 100vh;
     display: flex;
+    align-self: center;
+    justify-content: center;
+    /* align-items: center; */
+    /* background-color: orange; */
+    flex-direction: column;
+}
+
+.VisibNuvIndex-name{
+    display: flex;
     justify-content: center;
     align-items: flex-start;
-    /* background-color: orange; */
+    font-size: 1.5vw;
+    color: white;
+    gap: 70%;
 }
 
 .Wind {
@@ -199,12 +210,13 @@
     color: rgb(255, 255, 255);
     justify-content: center;
     align-items: center;
+    align-self: center;
     height: 10vh;
     width: 20vw;
-    flex-direction: column;
+    /* flex-direction: column; */
     background-color: rgba(0, 255, 242, 0.338);
     display: flex;
-    margin-right: 2%;
+    /* margin-right: 2%; */
     border: solid white 0.15em;
     box-shadow: white 2px 2px 12px;
     border-radius: 1em;
@@ -240,7 +252,7 @@
   }
 
   .chart-label-small:hover {
-    transform: scale(1.1);
+    transform: scale(101%);
   }
   
 
