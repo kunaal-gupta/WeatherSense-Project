@@ -212,6 +212,7 @@
     align-self: center;
     height: 10vh;
     width: 30vw;
+    cursor: pointer;
     /* flex-direction: column; */
     background-color: rgba(0, 255, 242, 0.338);
     display: flex;
@@ -222,6 +223,11 @@
 
 }
 
+ .Wind:hover{
+    transform: scale(1.05);
+    background-color: rgba(203, 144, 18, 0.402);
+ }
+  
 .dash-right-bottom-section {
     /* background-color: orange; */
     display: flex;

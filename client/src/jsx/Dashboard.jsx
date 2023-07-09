@@ -26,6 +26,7 @@ function Dashboard() {
 				setWindDeg(response.data.WindDeg)
 				setWindDir(response.data.WindDir)
 				setUVIndex(response.data.UV)
+				setTime(response.data.Time)
 
 			})
 			.catch(error => {
@@ -35,6 +36,8 @@ function Dashboard() {
 
 	const [Temp, setTemp] = useState(20);
 	const [TempUnit, setTempUnit] = useState('C');
+
+	const [Time, setTime] = useState(20);
 
 	const [FeelsLike, setFeelsLike] = useState(20);
 	const [FeelsLikeUnit, setFeelsLikeUnit] = useState('C');
@@ -53,6 +56,7 @@ function Dashboard() {
 	const [Gust, setGust] = useState(6);
 	const [GustUnit, setGustUnit] = useState('mph');
 
+	const [WindUnit, setWindUnit] = useState('mph')
 	const [Wind, setWind] = useState(0);
 	const [WindDeg, setWindDeg] = useState(270);
 	const [WindDir, setWindDir] = useState('N');
@@ -92,6 +96,18 @@ function Dashboard() {
 			setGust((Gust / 1.609).toFixed(1));
 		}
 	}
+
+
+	function WindChange() {
+		if  (WindUnit === 'mph') {
+			setWindUnit('kph');
+			setWind((Wind * 1.609).toFixed(1));
+		} else {
+			setWindUnit('mph');
+			setWind((Gust / 1.609).toFixed(1));
+		}
+	}
+
 
 	function changeTempUnit() {
 		if (TempUnit === 'C') {
@@ -158,7 +174,7 @@ function Dashboard() {
 						<div className='dash-right-content'>
 							<div className='daily-right-top-section'>
 
-								<div className='Wind'>Wind: {Wind} mph @ {WindDeg}°{WindDir}  </div>
+								<div className='Wind' onClick={WindChange}>Wind: {Wind} {WindUnit} @ {WindDeg}°{WindDir}  </div>
 								<div className='VisibNuvIndex-name'>
 									<div>Gust Speed</div>
 									<div> UV Index</div>
