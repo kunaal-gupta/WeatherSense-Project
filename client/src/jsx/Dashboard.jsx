@@ -12,25 +12,29 @@ function Dashboard() {
 	useEffect(() => {
 		const data = 'Active user details'
 		axios.get('http://localhost:5000/loadDashboard', data)
-			.then((response) => {
+			.then((response) => {				
 
 				console.log(response)
 
-				setLocation(response.data.Location)
-				setCloud(response.data.Cloud)
-				setTemp(response.data.Temp)
-				setFeelsLike(response.data.FeelsLike)
-				setGust(response.data.Gust)
-				setLatitude(response.data.Latitude)
-				setLongitude(response.data.Longitude)
-				setPressure(response.data.Pressure)
-				setVisibility(response.data.Visibility)
-				setGust(response.data.Gust)
-				setWind(response.data.Wind)
-				setWindDeg(response.data.WindDeg)
-				setWindDir(response.data.WindDir)
-				setUVIndex(response.data.UV)
-				setTime(response.data.Time)
+				setName(response.data.result.Name)
+				setEmail(response.data.result.Username)
+
+
+				setLocation(response.data.WeatherData.Location)
+				setCloud(response.data.WeatherData.Cloud)
+				setTemp(response.data.WeatherData.Temp)
+				setFeelsLike(response.data.WeatherData.FeelsLike)
+				setGust(response.data.WeatherData.Gust)
+				setLatitude(response.data.WeatherData.Latitude)
+				setLongitude(response.data.WeatherData.Longitude)
+				setPressure(response.data.WeatherData.Pressure)
+				setVisibility(response.data.WeatherData.Visibility)
+				setGust(response.data.WeatherData.Gust)
+				setWind(response.data.WeatherData.Wind)
+				setWindDeg(response.data.WeatherData.WindDeg)
+				setWindDir(response.data.WeatherData.WindDir)
+				setUVIndex(response.data.WeatherData.UV)
+				setTime(response.data.WeatherData.Time)
 
 			})
 			.catch(error => {

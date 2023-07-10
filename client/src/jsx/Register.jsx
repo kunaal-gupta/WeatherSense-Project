@@ -26,7 +26,7 @@ function RegisterData({ history }) {
 
               console.log(response.data);
               if (response.data === 'created') {
-                  history.push("/dashboard"); // Replace "/a" with the desired redirect URL
+                  history.push("/login"); // Replace "/a" with the desired redirect URL
               } else if (response.data === 'exists') {
                   document.getElementById('ProfileExists').style.display = 'block';
                   document.getElementById('Registerloader').style.display = 'none';

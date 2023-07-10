@@ -12,11 +12,15 @@ async function ActiveUserDetails() {
     const db = client.db('WeatherSenseDB');
     const col = db.collection('ActiveUsers');
 
-    const result = await col.findOne({});
+    // const options = {
+    //   sort: { timestamp: -1 } // Sort documents in descending order based on the "timestamp" field
+    // };
+
+    const result = await col.find({}).toArray();
     delete result._id;
 
     if (result) {
-      return result;
+      return result[0];
     } else {
       return 0;
     }

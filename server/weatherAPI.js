@@ -2,11 +2,11 @@ const axios = require('axios');
 
 const data = {};
 
-async function FetchAPIdata() {
+async function FetchAPIdata(city) {
   const options = {
     method: 'GET',
     url: 'https://weatherapi-com.p.rapidapi.com/current.json',
-    params: { q: 'Edmonton' },
+    params: { q: city },
     headers: {
       'X-RapidAPI-Key': 'a2b8cee08fmshf8ce534fdf59941p1031e5jsn95fae70bda7a',
       'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
@@ -16,7 +16,7 @@ async function FetchAPIdata() {
   try {
     const response = await axios.request(options);
 
-    data.Cloud = response.data.current.Cloud
+    data.Cloud = response.data.current.cloud
     data.Time = response.data.location.localtime
     data.UV = response.data.current.uv;
     data.Temp = response.data.current.temp_c;
@@ -44,7 +44,7 @@ async function FetchAPIdata() {
 }
 
 // (async () => {
-//   let a = await FetchAPIdata();
+//   let a = await FetchAPIdata('New York, Canada');
 //   console.log('hi', a);
 // })();
 

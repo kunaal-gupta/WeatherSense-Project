@@ -41,12 +41,14 @@ app.post('/registerCredentials', async (req, res) => {
 });
 
 app.get('/loadDashboard', async (req, res) => {
-  const WeatherData = await FetchAPIdata();
   const result = await ActiveUserDetails();
+  const WeatherData = await FetchAPIdata(result.City);
 
-  console.log(result)
+  finData = {result, WeatherData}
 
-  res.send([WeatherData, result]);
+  console.log(finData)
+
+  res.send(finData);
 
 })
 
