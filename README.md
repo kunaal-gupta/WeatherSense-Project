@@ -1,4 +1,9 @@
-## About
+<div align="center">
+
+# Weather Sense
+
+</div>
+
 This repository contains a full-stack project developed using the MERN stack (MongoDB, Express.js, React, and Node.js) that fetches weather data from an API and displays it on the frontend.
 
 ## Frontend
@@ -14,14 +19,14 @@ The MongoDB database, hosted on MongoDB Atlas, is utilized to store two collecti
 - [@Kunaal Gupta](https://github.com/kunaal-gupta)
 
 
-
-
 ## Installation and Setup
 
 ```bash
 git clone https://github.com/kunaal-gupta/WeatherSense.git
 ```
-
+```bash
+npm install
+```
 
 # Running App
 
@@ -85,6 +90,7 @@ npm Install
 
 [MongoDB](https://www.mongodb.com/)
 
+[Axios](https://axios-http.com/)
 
 
 ## Features
@@ -93,9 +99,6 @@ npm Install
 - Allows users to register and login to access personalized weather information
 - Stores user data, including name, email, password, and city, in a MongoDB database
 - Provides a responsive user interface with routing and sub-component rendering using React
-
-
-
 
 
 ## Contributing
