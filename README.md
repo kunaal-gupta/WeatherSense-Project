@@ -66,11 +66,6 @@ git clone https://github.com/kunaal-gupta/WeatherSense.git
 If you have any feedback, please reach out to us at kunaalgupta@hotmail.com
 
 
-## Lessons Learned
-
-What did you learn while building this project? What challenges did you face and how did you overcome them?
-
-
 ## Installation
 
 Install WeatherSense with npm after cloning the project
@@ -80,3 +75,20 @@ npm Install
 
 ```
     
+## Documentation
+
+[React Framework](https://react.dev/)
+
+[Express JS](https://expressjs.com/)
+
+[MongoDB](https://www.mongodb.com/)
+
+
+
+
+## Features
+
+- Responsive application that adapts to different screen sizes
+- Automatically updates weather information every minute
+
+
