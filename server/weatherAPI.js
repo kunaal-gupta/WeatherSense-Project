@@ -9,6 +9,8 @@ async function FetchAPIdata(city) {
     params: { q: city },
     headers: {
       'X-RapidAPI-Key': 'a2b8cee08fmshf8ce534fdf59941p1031e5jsn95fae70bda7a',
+      'X-RapidAPI-Key': 'Enter your API-KEY',
+
       'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
     }
   };
