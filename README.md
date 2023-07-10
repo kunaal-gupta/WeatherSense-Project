@@ -14,11 +14,12 @@ The backend consists of Express.js and Node.js, which act as a bridge between th
 
 The MongoDB database, hosted on MongoDB Atlas, is utilized to store two collections: one for active users (those currently logged in) and another for registered users. The registered users collection contains details such as name, email, password, and city.
 
-![WelcomePage](https://github.com/kunaal-gupta/WeatherSense/assets/87749508/651846b4-48b5-4e38-9f42-bd1a6769cc3a)
-![LoginPage](https://github.com/kunaal-gupta/WeatherSense/assets/87749508/098ab3f5-06e2-4abe-8e05-47675f159775)
+![WelcomePage](https://github.com/kunaal-gupta/WeatherSense-Project/assets/87749508/4e071391-8239-437c-9075-4d04ae09cf3c)
+![LoginPage](https://github.com/kunaal-gupta/WeatherSense-Project/assets/87749508/256fc740-3efd-40df-8e74-a05b2a316b9f)
+![RegisterPage](https://github.com/kunaal-gupta/WeatherSense-Project/assets/87749508/24076d4c-5528-47ad-8d03-4e3e345bf65b)
+![Dashboard](https://github.com/kunaal-gupta/WeatherSense-Project/assets/87749508/1f6d85ea-d3fd-44e1-afbf-e3fdeb53bae5)
 
-![RegisterPage](https://github.com/kunaal-gupta/WeatherSense/assets/87749508/2dba4e92-0142-49fe-a27f-ab4539dbc5ca)
-![Dashboard](https://github.com/kunaal-gupta/WeatherSense/assets/87749508/83e2c170-77cb-4ba8-9935-9e9dbf07d27e)
+
 
 ## Authors
 
