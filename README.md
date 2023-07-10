@@ -7,7 +7,7 @@
 This repository contains a full-stack project developed using the MERN stack (MongoDB, Express.js, React, and Node.js) that fetches local weather data from weather API and displays it on the dashboard.
 
 ## Frontend
-The frontend is built with React and is responsible for rendering and routing various sub-components, including the dashboard page, welcome page, and login/register pages. These pages are designed using a combination of HTML, CSS, and JavaScript. The Axios library is utilized to make GET/POST requests to fetch data from the Weather API and communicate with the MongoDB database.
+The frontend is built with React and is responsible for routing and renderin gvarious sub-components, including the dashboard page, welcome page, and login/register pages. These pages are designed using a combination of HTML, CSS, and JavaScript. The Axios library is utilized to make GET/POST requests to fetch data from the Weather API and communicate with the MongoDB database.
 
 ## Backend
 The backend consists of Express.js and Node.js, which act as a bridge between the React frontend and the database. It facilitates the retrieval of weather data by making API requests through Express's GET/POST functionality. 
