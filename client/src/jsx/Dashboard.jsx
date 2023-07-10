@@ -42,9 +42,9 @@ function Dashboard() {
 			});
 	}, [])
 
-	const [Name, setName] = useState('Ishaan Gupta')
-	const [Email, setEmail] = useState('ishaangupta@hotmail.com')
-	const [Location, setLocation] = useState('Edmonton, Alberta, Canada')
+	const [Name, setName] = useState('test')
+	const [Email, setEmail] = useState('test')
+	const [Location, setLocation] = useState('test')
 	const [Temp, setTemp] = useState(20);
 	const [TempUnit, setTempUnit] = useState('C');
 
@@ -56,7 +56,7 @@ function Dashboard() {
 	const [FeelsLikeUnit, setFeelsLikeUnit] = useState('C');
 
 	const [Visibility, setVisibility] = useState(70)
-	const [UVIndex, setUVIndex] = useState(40);
+	const [UVIndex, setUVIndex] = useState(5);
 
 	const [Longitude, setLongitude] = useState(-113.5);
 	const [Latitude, setLatitude] = useState(53.55);

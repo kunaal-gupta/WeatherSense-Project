@@ -46,7 +46,8 @@ app.get('/loadDashboard', async (req, res) => {
 
   finData = {result, WeatherData}
 
-  console.log(finData)
+  console.log('sending this data to frontend')
+  console.log(result)
 
   res.send(finData);
 

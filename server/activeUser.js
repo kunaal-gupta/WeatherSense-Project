@@ -20,7 +20,7 @@ async function ActiveUserDetails() {
     delete result._id;
 
     if (result) {
-      return result[0];
+      return result[result.length - 1];
     } else {
       return 0;
     }

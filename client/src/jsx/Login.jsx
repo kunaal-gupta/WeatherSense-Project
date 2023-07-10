@@ -11,6 +11,7 @@ function LoginData({ history }) {
   const [Username, setUsername] = useState('')
   const [Password, setPassword] = useState('')
 
+
   function SendLoginData(event) {
     document.getElementById('Loginloader').style.display = 'block';
     document.getElementById('Submit').style.display = 'none';
@@ -23,6 +24,8 @@ function LoginData({ history }) {
     const data = { 'Username': Username, 'Password': Password };
     axios.post('http://localhost:5000/loginCredentials', data)
       .then(response => {
+
+        console.log(Username, Password)
 
         if (response.data === 'successful') {
 
@@ -56,7 +59,6 @@ function LoginData({ history }) {
 
   }
 
-
   return (
     <form className="Loginform" onSubmit={SendLoginData}>
       <input className='LoginUsername' type="text" placeholder="Username" required onChange={(e) => setUsername(e.target.value)} />
@@ -70,6 +72,8 @@ function LoginData({ history }) {
     </form>
   );
 }
+
+
 
 const LoginWithRouter = withRouter(LoginData);
 
