@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
+import '../css/App.css'
 
 import LoadLoginPage from "./Login.jsx";
 import Contact from "./Contact.jsx";
@@ -11,12 +12,12 @@ import LoadRegisterPage from './Register.jsx'
 export default function App() {
   return (
     <BrowserRouter>
-      <nav>
-        <Link to="/">Home</Link>
+      <nav className="NavBar">
+        <Link className = 'home' to="/">Home</Link>
 
-        <Link to="/dashboard">Dashboard</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
+        <Link className = 'home' to="/dashboard">Dashboard</Link>
+        <Link className = 'home' to="/about">About</Link>
+        <Link className = 'home' to="/contact">Contact</Link>
 
       </nav>
 

@@ -6,9 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock } from '@fortawesome/free-solid-svg-icons';
 
 function Dashboard() {
-	const [Name, setName] = useState('test');
-	const [Email, setEmail] = useState('test');
-	const [Location, setLocation] = useState('test');
+	const [Name, setName] = useState('admin');
+	const [Email, setEmail] = useState('admin@weathersense.com');
+	const [Location, setLocation] = useState('AdminLocation');
 	const [Temp, setTemp] = useState(20);
 	const [TempUnit, setTempUnit] = useState('C');
 	const [Cloud, setCloud] = useState(0);
