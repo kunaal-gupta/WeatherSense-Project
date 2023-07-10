@@ -4,7 +4,7 @@
 
 </div>
 
-This repository contains a full-stack project developed using the MERN stack (MongoDB, Express.js, React, and Node.js) that fetches weather data from an API and displays it on the frontend.
+This repository contains a full-stack project developed using the MERN stack (MongoDB, Express.js, React, and Node.js) that fetches local weather data from weather API and displays it on the dashboard.
 
 ## Frontend
 The frontend is built with React and is responsible for rendering and routing various sub-components, including the dashboard page, welcome page, and login/register pages. These pages are designed using a combination of HTML, CSS, and JavaScript. The Axios library is utilized to make GET/POST requests to fetch data from the Weather API and communicate with the MongoDB database.
@@ -17,6 +17,8 @@ The MongoDB database, hosted on MongoDB Atlas, is utilized to store two collecti
 ## Authors
 
 - [@Kunaal Gupta](https://github.com/kunaal-gupta)
+- [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)]([https://katherineoelsner.com/](https://kunaal-gupta.github.io/))
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)]([https://www.linkedin.com](https://github.com/kunaal-gupta)/)
 
 
 ## Installation and Setup
@@ -106,5 +108,12 @@ npm Install
 Contributions are always welcome!
 
 If you encounter any bugs or would like to suggest improvements, please open an issue or submit a pull request.
+
+## About Me
+'m a results-driven full-stack software developer passionate about building innovative solutions using the latest tech stack in an Agile environment. With a focus on optimal functionality, quality, and reliability, I excel at developing robust software systems.
+
+My expertise lies in Python with frameworks like Django and libraries like Pandas, NumPy, OpenCV, Matplotlib, SciKit, and Tkinter . I'm also proficient in C++, JavaScript, Ajax, HTML5/CSS, React & Node.JS and have hands-on experience with blockchain technologies, specifically Solidity and Ethereum .
+
+In addition, I have a great understanding of database management systems such as MongoDB, MySQL, and SQLite . To streamline my work, I employ various tools including PyCharm, Visual Studio Code, JIRA, GitHub, Truffle, Metamask, Ganache, Remix IDE, and the Microsoft Suite.
 
 
