@@ -17,8 +17,10 @@ The MongoDB database, hosted on MongoDB Atlas, is utilized to store two collecti
 ## Authors
 
 - [@Kunaal Gupta](https://github.com/kunaal-gupta)
-- [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)]([https://katherineoelsner.com/](https://kunaal-gupta.github.io/))
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)]([https://www.linkedin.com](https://github.com/kunaal-gupta)/)
+
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://kunaal-gupta.github.io/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/iamkunaalgupta/)
+
 
 
 ## Installation and Setup
