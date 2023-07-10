@@ -109,7 +109,7 @@
 
     justify-content: center;
     flex-direction: column;
-    animation: Time-blink 2s linear infinite;
+    animation: Time-blink 1s linear infinite;
 
 }
 
