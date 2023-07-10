@@ -24,10 +24,23 @@ function LoginData({ history }) {
     axios.post('http://localhost:5000/loginCredentials', data)
       .then(response => {
 
-        console.log(response.data);
         if (response.data === 'successful') {
-          console.log('login succesfuul')
+
+          axios.post('http://localhost:5000/activeUsers', data)
+            .then(response => {
+
+              if (response.data === 'added') {
+                console.log('client: added to active list')
+              }
+            })
+            .catch(error => {
+              console.error(error);
+            });
+
+
           history.push("/dashboard"); // Replace "/a" with the desired redirect URL
+
+
         } else {
           document.getElementById('Loginloader').style.display = 'none';
           document.getElementById('Submit').style.display = 'block';
@@ -38,15 +51,16 @@ function LoginData({ history }) {
         }
       })
       .catch(error => {
-        console.error('hi', error);
+        console.error(error);
       });
+
   }
 
 
   return (
     <form className="Loginform" onSubmit={SendLoginData}>
       <input className='LoginUsername' type="text" placeholder="Username" required onChange={(e) => setUsername(e.target.value)} />
-      <input className='LoginPassword' type="password" placeholder="Password"  required onChange={(b) => setPassword(b.target.value)} />
+      <input className='LoginPassword' type="password" placeholder="Password" required onChange={(b) => setPassword(b.target.value)} />
       <div className="IncorrectIdPwd" id='IncorrectIdPwd'>Incorrect Username or password</div>
       <input className='Submit' id='Submit' type='submit' />
       <Link to="/register">

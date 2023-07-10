@@ -15,7 +15,6 @@ async function FetchAPIdata() {
 
   try {
     const response = await axios.request(options);
-    console.log(response.data)
 
     data.Cloud = response.data.current.Cloud
     data.Time = response.data.location.localtime

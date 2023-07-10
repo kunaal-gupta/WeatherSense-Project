@@ -13,9 +13,7 @@ async function RegisterCred(Username, Password, Name, City) {
         const query = { 'Username': Username, 'Password': Password, 'Name': Name, 'City': City };
         const result = await col.findOne(query);
 
-        console.log('hihiiiiiiiii', result)
-        
-
+    
         if (result) {
             return 1;
         } else {

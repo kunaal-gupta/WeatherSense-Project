@@ -18,8 +18,6 @@ function RegisterData({ history }) {
     document.getElementById('RegisterButton').style.display = 'none';
 
 
-
-
       event.preventDefault(); // Prevent the default form submission behavior
 
       const data = { 'Username': Email, 'Password': Password, 'Name': Name, 'City': City };

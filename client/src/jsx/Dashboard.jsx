@@ -10,10 +10,12 @@ import { faClock } from '@fortawesome/free-solid-svg-icons';
 
 function Dashboard() {
 	useEffect(() => {
-		const data = 'Send Temperature Data';
+		const data = 'Active user details'
 		axios.get('http://localhost:5000/loadDashboard', data)
 			.then((response) => {
-				
+
+				console.log(response)
+
 				setLocation(response.data.Location)
 				setCloud(response.data.Cloud)
 				setTemp(response.data.Temp)
@@ -32,10 +34,12 @@ function Dashboard() {
 
 			})
 			.catch(error => {
-				console.error('hi', error);
+				console.error(error);
 			});
 	}, [])
 
+	const [Name, setName] = useState('Ishaan Gupta')
+	const [Email, setEmail] = useState('ishaangupta@hotmail.com')
 	const [Location, setLocation] = useState('Edmonton, Alberta, Canada')
 	const [Temp, setTemp] = useState(20);
 	const [TempUnit, setTempUnit] = useState('C');
@@ -178,7 +182,7 @@ function Dashboard() {
 					<div className="dash-right-section">
 						<div className='dash-right-content'>
 							<div className='daily-right-top-section'>
-
+								<div className='UserDetails'>Hi {Name}, logged in as {Email}</div>
 								<div className='Wind' onClick={WindChange}>Wind: {Wind} {WindUnit} @ {WindDeg}°{WindDir}  </div>
 								<div className='VisibNuvIndex-name'>
 									<div className='Cloud'>Chances of Cloud</div>
@@ -194,7 +198,7 @@ function Dashboard() {
 
 								<div className='WindGraph'><WindGraph /></div>
 								<div className='thermom-section-right'>
-								<div className='thermom' style={{ height: `${UVIndex/0.11}%` }}></div>
+									<div className='thermom' style={{ height: `${UVIndex / 0.11}%` }}></div>
 
 								</div>
 
