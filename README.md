@@ -1,11 +1,13 @@
+## About
+This repository contains a full-stack project developed using the MERN stack (MongoDB, Express.js, React, and Node.js) that fetches weather data from an API and displays it on the frontend.
 
-# Weather Sense
+## Frontend
+The frontend is built with React and is responsible for rendering and routing various sub-components, including the dashboard page, welcome page, and login/register pages. These pages are designed using a combination of HTML, CSS, and JavaScript. The Axios library is utilized to make GET/POST requests to fetch data from the Weather API and communicate with the MongoDB database.
 
-This is a full-stack project developed using MERN Stack (MongoDB, ExpressJS, React & Nodejs) that fetches Weather API to display weather parameters like Humidity, UV index etc at frontend. 
-			
-- MongoDB database at the backend stores user details like Name, Email, Password & City to display user specific details
+## Backend
+The backend consists of Express.js and Node.js, which act as a bridge between the React frontend and the database. It facilitates the retrieval of weather data by making API requests through Express's GET/POST functionality. 
 
-- ExpressJS & NodeJs at the backend connects React framework with database and makes API requests for fetching data
+The MongoDB database, hosted on MongoDB Atlas, is utilized to store two collections: one for active users (those currently logged in) and another for registered users. The registered users collection contains details such as name, email, password, and city.
 
 ## Authors
 
@@ -14,14 +16,14 @@ This is a full-stack project developed using MERN Stack (MongoDB, ExpressJS, Rea
 
 
 
-## Clone the project
+## Installation and Setup
 
 ```bash
 git clone https://github.com/kunaal-gupta/WeatherSense.git
 ```
 
 
-## Running App
+# Running App
 
 **Server-side Application**
 
@@ -54,9 +56,9 @@ git clone https://github.com/kunaal-gupta/WeatherSense.git
 
 ## Tech Stack
 
-**Client:** React
+**Frontend:** React
 
-**Server:** Node, Express 
+**Backend:** Node, Express 
 
 **Database:** MongoDB
 
@@ -85,10 +87,21 @@ npm Install
 
 
 
-
 ## Features
 
-- Responsive application that adapts to different screen sizes
-- Automatically updates weather information every minute
+- Fetches weather data from an API every minute and displays it in the frontend
+- Allows users to register and login to access personalized weather information
+- Stores user data, including name, email, password, and city, in a MongoDB database
+- Provides a responsive user interface with routing and sub-component rendering using React
+
+
+
+
+
+## Contributing
+
+Contributions are always welcome!
+
+If you encounter any bugs or would like to suggest improvements, please open an issue or submit a pull request.
 
 
