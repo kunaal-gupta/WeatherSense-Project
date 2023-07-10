@@ -16,6 +16,8 @@ async function FetchAPIdata(city) {
   try {
     const response = await axios.request(options);
 
+    console.log(response)
+
     data.Cloud = response.data.current.cloud
     data.Time = response.data.location.localtime
     data.UV = response.data.current.uv;
@@ -33,6 +35,8 @@ async function FetchAPIdata(city) {
     data.Precipitation = response.data.current.precip_in;
     data.Localtime = response.data.location.localtime;
     data.UV = response.data.current.uv;
+    data.Humidity = response.data.current.humidity;
+
 
 
 

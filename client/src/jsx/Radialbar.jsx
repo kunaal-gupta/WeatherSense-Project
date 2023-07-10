@@ -1,8 +1,10 @@
 import React from "react";
 import ReactApexChart from 'react-apexcharts';
 
-export default function WindGraph() {
-  const series = [180, 120];
+export default function WindGraph(props) {
+  const { val1 } = props;
+
+  const series = [val1];
   const options = {
     chart: {
       height: 350,
@@ -25,15 +27,15 @@ export default function WindGraph() {
     },
     fill: {
       type: 'pattern',
-      colors: ['blue', 'orange'],
+      colors: ['orange'],
       pattern: {
         style: 'slantedLines',
-        width: 1,
+        width: 10,
         height: 1,
         strokeWidth: 1,
       },
     },
-    labels: ['Chances of Rain', 'Humidity'],
+    labels: ['Humidity'],
   };
 
   return (
@@ -41,7 +43,7 @@ export default function WindGraph() {
       <ReactApexChart options={options} series={series} type="radialBar" />
       <div className="chart-labels">
         <div className="chart-label chart-label-small" style={{ backgroundColor: 'orange', color: 'white', marginBottom: '1%' }}>Humidity</div>
-        <div className="chart-label chart-label-small" style={{ backgroundColor: 'blue', color: 'white' }}>Chances of Rain</div>
+        {/* <div className="chart-label chart-label-small" style={{ backgroundColor: 'blue', color: 'white' }}>Chances of Rain</div> */}
       </div>
     </div>
   );
