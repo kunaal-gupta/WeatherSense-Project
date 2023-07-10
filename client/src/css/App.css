@@ -1,5 +1,5 @@
 .NavBar{
-    background-color: black;
+    background-color: rgb(69, 102, 209);
     width: 100%;
     /* color: white; */
     height: 8vh;
@@ -7,6 +7,8 @@
     justify-content: center;
     flex-direction: row;
     align-items: center;
+    position: fixed;
+
 }
 
 .home{
@@ -14,10 +16,18 @@
     color: white;
     font-size: 1.5vw;
     margin-right: 1%;
-    background-color: orange;
-    padding: 1vh 2vw 1vh 2vw;
     text-decoration: none;
-    border-radius: 18px;
+    width: 10%;
+    text-align: center;
+    border: 1px solid white;
+
+    background-color: rgba(255, 166, 0, 0.84);
+    padding: 0.5vw ;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 1px 1px rgba(0, 98, 255, 0.532);
+    font-weight: bold;
+
 
 }
 
