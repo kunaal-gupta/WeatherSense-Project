@@ -110,7 +110,7 @@ Contributions are always welcome!
 If you encounter any bugs or would like to suggest improvements, please open an issue or submit a pull request.
 
 ## About Me
-'m a results-driven full-stack software developer passionate about building innovative solutions using the latest tech stack in an Agile environment. With a focus on optimal functionality, quality, and reliability, I excel at developing robust software systems.
+I'm a results-driven full-stack software developer passionate about building innovative solutions using the latest tech stack in an Agile environment. With a focus on optimal functionality, quality, and reliability, I excel at developing robust software systems.
 
 My expertise lies in Python with frameworks like Django and libraries like Pandas, NumPy, OpenCV, Matplotlib, SciKit, and Tkinter . I'm also proficient in C++, JavaScript, Ajax, HTML5/CSS, React & Node.JS and have hands-on experience with blockchain technologies, specifically Solidity and Ethereum .
 
